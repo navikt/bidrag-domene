@@ -1,4 +1,4 @@
-package no.nav.bidrag.domain.ident
+package no.nav.bidrag.domene.ident
 
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test

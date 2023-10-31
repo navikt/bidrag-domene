@@ -1,4 +1,4 @@
-package no.nav.bidrag.domain.enums
+package no.nav.bidrag.domene.enums
 
 enum class InntektType {
     AAP, // Ytelse fra offentlig

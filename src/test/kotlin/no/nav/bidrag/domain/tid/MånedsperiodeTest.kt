@@ -1,4 +1,4 @@
-package no.nav.bidrag.domain.tid
+package no.nav.bidrag.domene.tid
 
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper

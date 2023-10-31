@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package no.nav.bidrag.domain.enums
+package no.nav.bidrag.domene.enums
 
 enum class Fogdårsak(
     val beskrivelse: String,

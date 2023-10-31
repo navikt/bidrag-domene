@@ -1,4 +1,4 @@
-package no.nav.bidrag.domain.enums.resultatkoder
+package no.nav.bidrag.domene.enums.resultatkoder
 
 enum class ResultatKodeForskudd {
     AVSLAG,

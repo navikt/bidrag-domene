@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package no.nav.bidrag.domain.enums
+package no.nav.bidrag.domene.enums
 
 enum class Sakshendelsestype(private val beskrivelse: String, val gyldig: Boolean) {
     ASLU("Avsluttet", true),

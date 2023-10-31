@@ -1,4 +1,4 @@
-package no.nav.bidrag.domain.enums.regnskap.behandlingsstatus
+package no.nav.bidrag.domene.enums.regnskap.behandlingsstatus
 
 enum class Batchstatus {
     Failed,

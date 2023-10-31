@@ -1,4 +1,4 @@
-# bidrag-domain
+# bidrag-domene
 Domenetyper for team bidrag.
 
 Spesifikke domenetyper gjør at regler kan sentraliseres på tvers av prosjekter og sikrer 

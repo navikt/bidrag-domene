@@ -1,4 +1,4 @@
-package no.nav.bidrag.domain.enums.sjablon
+package no.nav.bidrag.domene.enums.sjablon
 
 enum class SjablonNavn(val navn: String) {
     BARNETILSYN("Barnetilsyn"),

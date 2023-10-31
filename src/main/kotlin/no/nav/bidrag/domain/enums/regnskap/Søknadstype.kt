@@ -1,4 +1,4 @@
-package no.nav.bidrag.domain.enums.regnskap
+package no.nav.bidrag.domene.enums.regnskap
 
 enum class Søknadstype {
     IR,

@@ -1,9 +1,9 @@
 @file:Suppress("unused")
 
-package no.nav.bidrag.domain.tid
+package no.nav.bidrag.domene.tid
 
 import jakarta.persistence.AttributeConverter
-import no.nav.bidrag.domain.felles.Verdiobjekt
+import no.nav.bidrag.domene.felles.Verdiobjekt
 import org.springframework.core.convert.converter.Converter
 import java.sql.Date
 import java.time.LocalDate

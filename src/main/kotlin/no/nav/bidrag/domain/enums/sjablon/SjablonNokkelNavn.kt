@@ -1,4 +1,4 @@
-package no.nav.bidrag.domain.enums.sjablon
+package no.nav.bidrag.domene.enums.sjablon
 
 enum class SjablonNokkelNavn(val navn: String) {
     STONAD_TYPE("StønadType"),

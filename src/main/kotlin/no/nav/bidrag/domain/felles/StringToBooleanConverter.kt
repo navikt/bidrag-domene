@@ -1,4 +1,4 @@
-package no.nav.bidrag.domain.felles
+package no.nav.bidrag.domene.felles
 
 import org.springframework.core.convert.converter.Converter
 import java.util.Locale

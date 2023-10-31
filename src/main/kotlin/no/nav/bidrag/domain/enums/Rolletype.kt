@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package no.nav.bidrag.domain.enums
+package no.nav.bidrag.domene.enums
 
 import com.fasterxml.jackson.annotation.JsonAlias
 import com.fasterxml.jackson.annotation.JsonProperty

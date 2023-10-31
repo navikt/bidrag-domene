@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package no.nav.bidrag.domain.enums
+package no.nav.bidrag.domene.enums
 
 enum class Konvensjon(private val beskrivelse: String) {
     AiS("Annet - iSupport"),

@@ -1,4 +1,4 @@
-package no.nav.bidrag.domain.enums
+package no.nav.bidrag.domene.enums
 
 enum class BehandlingsrefKilde {
     BEHANDLING_ID, // Id fra bidrag-behandling

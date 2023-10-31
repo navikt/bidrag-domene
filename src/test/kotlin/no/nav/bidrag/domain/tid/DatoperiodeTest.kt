@@ -1,4 +1,4 @@
-package no.nav.bidrag.domain.tid
+package no.nav.bidrag.domene.tid
 
 import io.kotest.assertions.throwables.shouldThrowMessage
 import io.kotest.matchers.shouldBe

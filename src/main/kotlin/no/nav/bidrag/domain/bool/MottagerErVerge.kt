@@ -1,10 +1,10 @@
 @file:Suppress("unused")
 
-package no.nav.bidrag.domain.bool
+package no.nav.bidrag.domene.bool
 
 import jakarta.persistence.AttributeConverter
-import no.nav.bidrag.domain.felles.StringToBooleanConverter
-import no.nav.bidrag.domain.felles.Verdiobjekt
+import no.nav.bidrag.domene.felles.StringToBooleanConverter
+import no.nav.bidrag.domene.felles.Verdiobjekt
 import org.springframework.core.convert.converter.Converter
 
 class MottagerErVerge(override val verdi: Boolean) : Verdiobjekt<Boolean>()

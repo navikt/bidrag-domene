@@ -1,9 +1,9 @@
-package no.nav.bidrag.domain.enum
+package no.nav.bidrag.domene.enum
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import io.kotest.matchers.shouldBe
-import no.nav.bidrag.domain.enums.Rolletype
+import no.nav.bidrag.domene.enums.Rolletype
 import org.junit.jupiter.api.Test
 
 class RolletypeMapperTest {

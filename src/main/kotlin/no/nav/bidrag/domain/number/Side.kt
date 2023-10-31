@@ -1,9 +1,9 @@
 @file:Suppress("unused")
 
-package no.nav.bidrag.domain.number
+package no.nav.bidrag.domene.number
 
 import jakarta.persistence.AttributeConverter
-import no.nav.bidrag.domain.felles.Verdiobjekt
+import no.nav.bidrag.domene.felles.Verdiobjekt
 import org.springframework.core.convert.converter.Converter
 
 class Side(override val verdi: Int) : Verdiobjekt<Int>()

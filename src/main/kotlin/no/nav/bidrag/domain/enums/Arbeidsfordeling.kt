@@ -1,8 +1,8 @@
 @file:Suppress("unused")
 
-package no.nav.bidrag.domain.enums
+package no.nav.bidrag.domene.enums
 
-import no.nav.bidrag.domain.string.Behandlingstema
+import no.nav.bidrag.domene.string.Behandlingstema
 
 enum class Arbeidsfordeling(
     private val beskrivelse: String,

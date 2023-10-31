@@ -1,10 +1,10 @@
 @file:Suppress("unused")
 
-package no.nav.bidrag.domain.ident
+package no.nav.bidrag.domene.ident
 
 import jakarta.persistence.AttributeConverter
-import no.nav.bidrag.domain.felles.Verdiobjekt
-import no.nav.bidrag.domain.util.trimToNull
+import no.nav.bidrag.domene.felles.Verdiobjekt
+import no.nav.bidrag.domene.util.trimToNull
 import org.springframework.core.convert.converter.Converter
 
 class TssId(override val verdi: String) : Verdiobjekt<String>() {

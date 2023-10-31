@@ -1,9 +1,9 @@
-package no.nav.bidrag.domain.enum
+package no.nav.bidrag.domene.enum
 
 import io.kotest.matchers.shouldBe
-import no.nav.bidrag.domain.enums.InntektRapportering
-import no.nav.bidrag.domain.enums.InntektType
-import no.nav.bidrag.domain.enums.InntektType.Companion.inngårIInntektRapporteringer
+import no.nav.bidrag.domene.enums.InntektRapportering
+import no.nav.bidrag.domene.enums.InntektType
+import no.nav.bidrag.domene.enums.InntektType.Companion.inngårIInntektRapporteringer
 import org.junit.jupiter.api.Test
 
 class InntektTypeTest {

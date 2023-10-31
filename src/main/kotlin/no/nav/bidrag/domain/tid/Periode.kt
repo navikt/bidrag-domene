@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package no.nav.bidrag.domain.tid
+package no.nav.bidrag.domene.tid
 
 import java.time.temporal.Temporal
 

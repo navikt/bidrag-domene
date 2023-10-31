@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package no.nav.bidrag.domain.felles
+package no.nav.bidrag.domene.felles
 
 import com.fasterxml.jackson.annotation.JsonValue
 import kotlin.contracts.ExperimentalContracts

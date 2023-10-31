@@ -1,4 +1,4 @@
-package no.nav.bidrag.domain.enums.barnetilsyn
+package no.nav.bidrag.domene.enums.barnetilsyn
 
 enum class Skolealder {
     OVER,

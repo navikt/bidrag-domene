@@ -1,4 +1,4 @@
-package no.nav.bidrag.domain.enums.regnskap
+package no.nav.bidrag.domene.enums.regnskap
 
 import io.swagger.v3.oas.annotations.media.Schema
 

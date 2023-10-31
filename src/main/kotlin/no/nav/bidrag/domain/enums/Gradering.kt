@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package no.nav.bidrag.domain.enums
+package no.nav.bidrag.domene.enums
 
 enum class Gradering(val diskresjonskode: Diskresjonskode?) {
     STRENGT_FORTROLIG(Diskresjonskode.SPSF),
