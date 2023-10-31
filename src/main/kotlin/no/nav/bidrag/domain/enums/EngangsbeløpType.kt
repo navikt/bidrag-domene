@@ -1,0 +1,12 @@
+package no.nav.bidrag.domain.enums
+
+enum class EngangsbeløpType {
+    DIREKTE_OPPGJOR,
+    ETTERGIVELSE,
+    ETTERGIVELSE_TILBAKEKREVING,
+    GEBYR_MOTTAKER,
+    GEBYR_SKYLDNER,
+    INNKREVING_GJELD,
+    SAERTILSKUDD,
+    TILBAKEKREVING,
+}
