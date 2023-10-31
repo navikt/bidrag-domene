@@ -2,7 +2,7 @@
 
 package no.nav.bidrag.domene.enums
 
-import no.nav.bidrag.domene.string.Behandlingstema
+import no.nav.bidrag.domene.streng.Behandlingstema
 
 enum class Arbeidsfordeling(
     private val beskrivelse: String,

@@ -2,7 +2,7 @@ package no.nav.bidrag.domene.felles
 
 import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
-import no.nav.bidrag.domene.string.Saksnummer
+import no.nav.bidrag.domene.streng.Saksnummer
 import org.junit.jupiter.api.Test
 
 class VerdiobjektTest {
