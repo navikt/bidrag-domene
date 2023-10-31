@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package no.nav.bidrag.domene.number
+package no.nav.bidrag.domene.tall
 
 import jakarta.persistence.AttributeConverter
 import no.nav.bidrag.domene.felles.Verdiobjekt

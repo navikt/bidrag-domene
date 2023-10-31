@@ -46,5 +46,5 @@ data class Datoperiode(override val fom: LocalDate, override val til: LocalDate?
         return (tilEllerMax().year * 12 + tilEllerMax().monthValue) - (fom.year * 12 + fom.monthValue).toLong()
     }
 
-    fun toMånedsperiode() = Månedsperiode(fom, til)
+    fun toMånedsperiode() = ÅrMånedsperiode(fom, til)
 }

@@ -13,7 +13,7 @@ import java.time.LocalDate
 import java.time.YearMonth
 import java.time.format.DateTimeFormatter
 
-internal class MånedsperiodeTest {
+internal class ÅrMånedsperiodeTest {
 
     val objectMapper = ObjectMapper()
         .registerKotlinModule()
@@ -28,40 +28,40 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `Månedsperiode serialiserer og deserialiserer riktig ved tidenes morgen`() {
-        val månedsperiode = Månedsperiode(LocalDate.MIN, LocalDate.MIN)
+        val årMånedsperiode = ÅrMånedsperiode(LocalDate.MIN, LocalDate.MIN)
 
-        val writeValueAsString = objectMapper.writeValueAsString(månedsperiode)
+        val writeValueAsString = objectMapper.writeValueAsString(årMånedsperiode)
 
-        val deserialisert = objectMapper.readValue<Månedsperiode>(writeValueAsString)
+        val deserialisert = objectMapper.readValue<ÅrMånedsperiode>(writeValueAsString)
 
-        månedsperiode shouldBe deserialisert
+        årMånedsperiode shouldBe deserialisert
     }
 
     @Test
     fun `Månedsperiode serialiserer og deserialiserer riktig ved tidenes ende`() {
-        val månedsperiode = Månedsperiode(LocalDate.MAX, LocalDate.MAX)
+        val årMånedsperiode = ÅrMånedsperiode(LocalDate.MAX, LocalDate.MAX)
 
-        val writeValueAsString = objectMapper.writeValueAsString(månedsperiode)
+        val writeValueAsString = objectMapper.writeValueAsString(årMånedsperiode)
 
-        val deserialisert = objectMapper.readValue<Månedsperiode>(writeValueAsString)
+        val deserialisert = objectMapper.readValue<ÅrMånedsperiode>(writeValueAsString)
 
-        månedsperiode shouldBe deserialisert
+        årMånedsperiode shouldBe deserialisert
     }
 
     @Test
     fun `Månedsperiode serialiserer og deserialiserer riktig ved år 0`() {
-        val månedsperiode = Månedsperiode(YearMonth.of(0, 1), YearMonth.of(0, 1))
+        val årMånedsperiode = ÅrMånedsperiode(YearMonth.of(0, 1), YearMonth.of(0, 1))
 
-        val writeValueAsString = objectMapper.writeValueAsString(månedsperiode)
+        val writeValueAsString = objectMapper.writeValueAsString(årMånedsperiode)
 
-        val deserialisert = objectMapper.readValue<Månedsperiode>(writeValueAsString)
+        val deserialisert = objectMapper.readValue<ÅrMånedsperiode>(writeValueAsString)
 
-        månedsperiode shouldBe deserialisert
+        årMånedsperiode shouldBe deserialisert
     }
 
     @Test
     fun `inneholder returnere true hvis måned er i perioden`() {
-        val periode = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 5))
+        val periode = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 5))
 
         val inneholder = periode.inneholder(YearMonth.of(2019, 1))
 
@@ -70,7 +70,7 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `inneholder returnere true hvis måned ikke er i perioden`() {
-        val periode = Månedsperiode(YearMonth.of(2019, 2), YearMonth.of(2019, 5))
+        val periode = ÅrMånedsperiode(YearMonth.of(2019, 2), YearMonth.of(2019, 5))
 
         val inneholder = periode.inneholder(YearMonth.of(2019, 1))
 
@@ -79,8 +79,8 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `snitt returnerer lik periode for like perioder`() {
-        val periode1 = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 5))
-        val periode2 = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 5))
+        val periode1 = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 5))
+        val periode2 = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 5))
 
         val snitt = periode1.snitt(periode2)
 
@@ -89,8 +89,8 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `snitt returnerer null for periode uten overlap`() {
-        val periode1 = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 5))
-        val periode2 = Månedsperiode(YearMonth.of(2018, 1), YearMonth.of(2018, 12))
+        val periode1 = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 5))
+        val periode2 = ÅrMånedsperiode(YearMonth.of(2018, 1), YearMonth.of(2018, 12))
 
         val snitt = periode1.snitt(periode2)
 
@@ -99,14 +99,14 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `snitt returnerer lik periode uansett hvilken periode som ligger til grunn`() {
-        val periode1 = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 5))
-        val periode2 = Månedsperiode(YearMonth.of(2019, 3), YearMonth.of(2019, 12))
+        val periode1 = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 5))
+        val periode2 = ÅrMånedsperiode(YearMonth.of(2019, 3), YearMonth.of(2019, 12))
 
         val snitt1til2 = periode1.snitt(periode2)
         val snitt2til1 = periode2.snitt(periode1)
 
         snitt1til2 shouldBe snitt2til1
-        snitt1til2 shouldBe Månedsperiode(YearMonth.of(2019, 3), YearMonth.of(2019, 5))
+        snitt1til2 shouldBe ÅrMånedsperiode(YearMonth.of(2019, 3), YearMonth.of(2019, 5))
     }
 
     @Test
@@ -187,8 +187,8 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `inneholder returnerer true for periode som helt inneholder innsendt periode`() {
-        val periode1 = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
-        val periode2 = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 1))
+        val periode1 = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
+        val periode2 = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 1))
 
         val inneholder = periode1.inneholder(periode2)
 
@@ -197,8 +197,8 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `inneholder returnerer false for periode som stikker utenfor innsendt periode`() {
-        val periode1 = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
-        val periode2 = Månedsperiode(YearMonth.of(2019, 2), YearMonth.of(2019, 4))
+        val periode1 = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
+        val periode2 = ÅrMånedsperiode(YearMonth.of(2019, 2), YearMonth.of(2019, 4))
 
         val inneholder = periode1.inneholder(periode2)
 
@@ -207,8 +207,8 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `omsluttesAv returnerer true for periode som helt omsluttes av innsendt periode`() {
-        val periode1 = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 1))
-        val periode2 = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
+        val periode1 = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 1))
+        val periode2 = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
 
         val inneholder = periode1.omsluttesAv(periode2)
 
@@ -217,8 +217,8 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `omsluttesAv returnerer false for periode som nesten omsluttes av innsendt periode`() {
-        val periode1 = Månedsperiode(YearMonth.of(2019, 2), YearMonth.of(2019, 4))
-        val periode2 = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
+        val periode1 = ÅrMånedsperiode(YearMonth.of(2019, 2), YearMonth.of(2019, 4))
+        val periode2 = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
 
         val inneholder = periode1.omsluttesAv(periode2)
 
@@ -227,8 +227,8 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `overlapperIStartenAv returnerer true hvis denne perioden overlapper i starten av perioden som sendes inn`() {
-        val periodeSomOverlapperStarten = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 1))
-        val periode = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
+        val periodeSomOverlapperStarten = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 1))
+        val periode = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
 
         val overlapperIStartenAv = periodeSomOverlapperStarten.overlapperKunIStartenAv(periode)
 
@@ -237,8 +237,8 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `overlapperIStartenAv returnerer false hvis denne perioden er lik den som sendes inn`() {
-        val periodeSomErLik = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
-        val periode = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
+        val periodeSomErLik = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
+        val periode = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
 
         val overlapperIStartenAv = periodeSomErLik.overlapperKunIStartenAv(periode)
 
@@ -247,8 +247,8 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `overlapperIStartenAv returnerer false hvis denne perioden er før den som sendes inn`() {
-        val periodeSomErFør = Månedsperiode(YearMonth.of(2018, 9), YearMonth.of(2018, 12))
-        val periode = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
+        val periodeSomErFør = ÅrMånedsperiode(YearMonth.of(2018, 9), YearMonth.of(2018, 12))
+        val periode = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
 
         val overlapperIStartenAv = periodeSomErFør.overlapperKunIStartenAv(periode)
 
@@ -257,8 +257,8 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `overlapperIStartenAv returnerer false hvis denne perioden starter etter den som sendes inn`() {
-        val periodeSomErInneI = Månedsperiode(YearMonth.of(2018, 9), YearMonth.of(2018, 9))
-        val periode = Månedsperiode(YearMonth.of(2018, 9), YearMonth.of(2018, 9))
+        val periodeSomErInneI = ÅrMånedsperiode(YearMonth.of(2018, 9), YearMonth.of(2018, 9))
+        val periode = ÅrMånedsperiode(YearMonth.of(2018, 9), YearMonth.of(2018, 9))
 
         val overlapperIStartenAv = periodeSomErInneI.overlapperKunIStartenAv(periode)
 
@@ -267,8 +267,8 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `overlapperISluttenAv returnerer true hvis denne perioden overlapper i slutten av perioden som sendes inn`() {
-        val periodeSomOverlapperSlutten = Månedsperiode(YearMonth.of(2019, 3), YearMonth.of(2019, 3))
-        val periode = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
+        val periodeSomOverlapperSlutten = ÅrMånedsperiode(YearMonth.of(2019, 3), YearMonth.of(2019, 3))
+        val periode = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
 
         val overlapperISluttenAv = periodeSomOverlapperSlutten.overlapperKunISluttenAv(periode)
 
@@ -277,8 +277,8 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `overlapperISluttenAv returnerer false hvis denne perioden er lik den som sendes inn`() {
-        val periodeSomErLik = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
-        val periode = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
+        val periodeSomErLik = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
+        val periode = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
 
         val overlapperISluttenAv = periodeSomErLik.overlapperKunISluttenAv(periode)
 
@@ -287,8 +287,8 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `overlapperISluttenAv returnerer false hvis denne perioden er etter den som sendes inn`() {
-        val periodeSomErEtter = Månedsperiode(YearMonth.of(2019, 4), YearMonth.of(2019, 4))
-        val periode = Månedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
+        val periodeSomErEtter = ÅrMånedsperiode(YearMonth.of(2019, 4), YearMonth.of(2019, 4))
+        val periode = ÅrMånedsperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 3))
 
         val overlapperISluttenAv = periodeSomErEtter.overlapperKunISluttenAv(periode)
 
@@ -297,8 +297,8 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `overlapperISluttenAv returnerer false hvis denne perioden slutter før den som sendes inn`() {
-        val periodeSomErInneI = Månedsperiode(YearMonth.of(2018, 9), YearMonth.of(2018, 9))
-        val periode = Månedsperiode(YearMonth.of(2018, 9), YearMonth.of(2018, 9))
+        val periodeSomErInneI = ÅrMånedsperiode(YearMonth.of(2018, 9), YearMonth.of(2018, 9))
+        val periode = ÅrMånedsperiode(YearMonth.of(2018, 9), YearMonth.of(2018, 9))
 
         val overlapperISluttenAv = periodeSomErInneI.overlapperKunISluttenAv(periode)
 
@@ -307,7 +307,7 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `lengdeIHeleMåneder returnerer korrekt antall måneder for lange perioder`() {
-        val periode = Månedsperiode(YearMonth.of(2015, 9), YearMonth.of(2028, 3))
+        val periode = ÅrMånedsperiode(YearMonth.of(2015, 9), YearMonth.of(2028, 3))
 
         val lengdeIHeleMåneder = periode.lengdeIHeleMåneder()
 
@@ -316,7 +316,7 @@ internal class MånedsperiodeTest {
 
     @Test
     fun `lengdeIHeleMåneder returnerer korrekt antall måneder for korte perioder`() {
-        val periode = Månedsperiode(YearMonth.of(2015, 9), YearMonth.of(2015, 12))
+        val periode = ÅrMånedsperiode(YearMonth.of(2015, 9), YearMonth.of(2015, 12))
 
         val lengdeIHeleMåneder = periode.lengdeIHeleMåneder()
 
