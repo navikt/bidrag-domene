@@ -9,10 +9,10 @@ internal class DatoperiodeTest {
 
     @Test
     fun soretdBySortererrikitg() {
-        val nummer1 = Månedsperiode("2021-01" to "2021-02")
-        val nummer2 = Månedsperiode("2021-01" to "2021-03")
-        val nummer3 = Månedsperiode("2021-01" to "2021-03")
-        val nummer4 = Månedsperiode("2021-02" to "2021-03")
+        val nummer1 = ÅrMånedsperiode("2021-01" to "2021-02")
+        val nummer2 = ÅrMånedsperiode("2021-01" to "2021-03")
+        val nummer3 = ÅrMånedsperiode("2021-01" to "2021-03")
+        val nummer4 = ÅrMånedsperiode("2021-02" to "2021-03")
 
         val sorted = listOf(nummer4, nummer3, nummer1, nummer2).sorted()
 

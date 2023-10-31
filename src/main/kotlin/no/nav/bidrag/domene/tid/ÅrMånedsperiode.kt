@@ -5,7 +5,7 @@ package no.nav.bidrag.domene.tid
 import java.time.LocalDate
 import java.time.YearMonth
 
-data class Månedsperiode(override val fom: YearMonth, override val til: YearMonth?) : Periode<YearMonth>() {
+data class ÅrMånedsperiode(override val fom: YearMonth, override val til: YearMonth?) : Periode<YearMonth>() {
 
     init {
         validate()
@@ -24,16 +24,16 @@ data class Månedsperiode(override val fom: YearMonth, override val til: YearMon
 
     constructor(periode: Pair<String, String>) : this(periode.first, periode.second)
 
-    override fun lagPeriode(fom: YearMonth, til: YearMonth?): Månedsperiode {
-        return Månedsperiode(fom, til)
+    override fun lagPeriode(fom: YearMonth, til: YearMonth?): ÅrMånedsperiode {
+        return ÅrMånedsperiode(fom, til)
     }
 
-    override infix fun union(annen: Periode<YearMonth>): Månedsperiode {
-        return super.union(annen) as Månedsperiode
+    override infix fun union(annen: Periode<YearMonth>): ÅrMånedsperiode {
+        return super.union(annen) as ÅrMånedsperiode
     }
 
-    override infix fun snitt(annen: Periode<YearMonth>): Månedsperiode? {
-        return super.snitt(annen) as Månedsperiode?
+    override infix fun snitt(annen: Periode<YearMonth>): ÅrMånedsperiode? {
+        return super.snitt(annen) as ÅrMånedsperiode?
     }
 
     override infix fun påfølgesAv(påfølgende: Periode<YearMonth>): Boolean {
