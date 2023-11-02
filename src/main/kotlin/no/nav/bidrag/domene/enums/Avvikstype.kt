@@ -1,6 +1,6 @@
 package no.nav.bidrag.domene.enums
 
-enum class AvvikType {
+enum class Avvikstype {
     PERIODER_OVERLAPPER,
     PERIODER_HAR_OPPHOLD,
     NULL_VERDI_I_DATO,

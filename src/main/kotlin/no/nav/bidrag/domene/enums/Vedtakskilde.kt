@@ -1,6 +1,6 @@
 package no.nav.bidrag.domene.enums
 
-enum class VedtakKilde {
+enum class Vedtakskilde {
     MANUELT,
     AUTOMATISK,
 }

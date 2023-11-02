@@ -1,6 +1,6 @@
 package no.nav.bidrag.domene.enums
 
-enum class BostatusKode {
+enum class Bostatuskode {
     // Forskudd (barn)
     BOR_MED_FORELDRE,
     BOR_IKKE_MED_FORELDRE,

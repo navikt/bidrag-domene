@@ -4,16 +4,16 @@ import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test
 import java.time.LocalDate
 
-internal class PersonIdentTest {
+internal class PersonidentTest {
 
     @Test
     fun `skal anonmisere personIdent`() {
-        PersonIdent("15507600333").toString() shouldBe "*5*0*6*0*3*"
-        PersonIdent("29422059278").toString() shouldBe "*9*2*0*9*7*"
-        PersonIdent("07420450952").toString() shouldBe "*7*2*4*0*5*"
+        Personident("15507600333").toString() shouldBe "*5*0*6*0*3*"
+        Personident("29422059278").toString() shouldBe "*9*2*0*9*7*"
+        Personident("07420450952").toString() shouldBe "*7*2*4*0*5*"
 
-        PersonIdent("15507600333").toString() shouldBe "*5*0*6*0*3*"
-        PersonIdent("29422059278").toString() shouldBe "*9*2*0*9*7*"
+        Personident("15507600333").toString() shouldBe "*5*0*6*0*3*"
+        Personident("29422059278").toString() shouldBe "*9*2*0*9*7*"
     }
 
     @Test
@@ -36,25 +36,25 @@ internal class PersonIdentTest {
         )
 
         listeAvBrukere.forEach {
-            PersonIdent(it.fnr).verdi shouldBe it.fnr
-            PersonIdent(it.dnr).verdi shouldBe it.dnr
-            PersonIdent(it.fnr).fødselsdato() shouldBe it.fødselsdato
-            PersonIdent(it.dnr).fødselsdato() shouldBe it.fødselsdato
-            PersonIdent(it.fnr).erDNummer() shouldBe false
-            PersonIdent(it.dnr).erDNummer() shouldBe true
+            Personident(it.fnr).verdi shouldBe it.fnr
+            Personident(it.dnr).verdi shouldBe it.dnr
+            Personident(it.fnr).fødselsdato() shouldBe it.fødselsdato
+            Personident(it.dnr).fødselsdato() shouldBe it.fødselsdato
+            Personident(it.fnr).erDNummer() shouldBe false
+            Personident(it.dnr).erDNummer() shouldBe true
         }
     }
 
     @Test
     fun `skal ikke tolke samhandlere som personidenter`() {
-        PersonIdent("80000000000").gyldig() shouldBe false
-        PersonIdent("80000000000").erDNummer() shouldBe false
-        PersonIdent("80000000000").erSkattSyntetisk() shouldBe false
-        PersonIdent("80000000000").erNAVSyntetisk() shouldBe false
-        PersonIdent("90000000000").gyldig() shouldBe false
-        PersonIdent("90000000000").erDNummer() shouldBe false
-        PersonIdent("90000000000").erSkattSyntetisk() shouldBe false
-        PersonIdent("90000000000").erNAVSyntetisk() shouldBe false
+        Personident("80000000000").gyldig() shouldBe false
+        Personident("80000000000").erDNummer() shouldBe false
+        Personident("80000000000").erSkattSyntetisk() shouldBe false
+        Personident("80000000000").erNAVSyntetisk() shouldBe false
+        Personident("90000000000").gyldig() shouldBe false
+        Personident("90000000000").erDNummer() shouldBe false
+        Personident("90000000000").erSkattSyntetisk() shouldBe false
+        Personident("90000000000").erNAVSyntetisk() shouldBe false
     }
 
     data class SyntetiskBruker(val fnr: String, val dnr: String, val kjønn: String, val fødselsdato: LocalDate)

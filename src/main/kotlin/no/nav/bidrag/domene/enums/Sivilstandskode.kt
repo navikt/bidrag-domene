@@ -1,6 +1,6 @@
 package no.nav.bidrag.domene.enums
 
-enum class SivilstandKode {
+enum class Sivilstandskode {
     GIFT,
     UGIFT,
     ENSLIG,

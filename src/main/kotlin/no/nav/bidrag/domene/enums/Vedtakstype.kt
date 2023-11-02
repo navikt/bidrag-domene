@@ -1,6 +1,6 @@
 package no.nav.bidrag.domene.enums
 
-enum class VedtakType {
+enum class Vedtakstype {
     INDEKSREGULERING,
     ALDERSJUSTERING,
     OPPHØR,
