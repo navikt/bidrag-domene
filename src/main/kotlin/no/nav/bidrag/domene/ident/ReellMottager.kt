@@ -10,14 +10,14 @@ import org.springframework.core.convert.converter.Converter
 class ReellMottager(override val verdi: String) : Verdiobjekt<String>() {
 
     override fun gyldig(): Boolean {
-        return PersonIdent(verdi).gyldig() || SamhandlerId(verdi).gyldig()
+        return Personident(verdi).gyldig() || SamhandlerId(verdi).gyldig()
     }
 
-    fun erPersonIdent() = PersonIdent(verdi).gyldig()
+    fun erPersonIdent() = Personident(verdi).gyldig()
 
     fun erSamhandlerId() = SamhandlerId(verdi).gyldig()
 
-    fun personIdent() = if (erPersonIdent()) PersonIdent(verdi) else null
+    fun personIdent() = if (erPersonIdent()) Personident(verdi) else null
 
     fun samhandlerId() = if (erSamhandlerId()) SamhandlerId(verdi) else null
 }

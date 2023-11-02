@@ -8,7 +8,7 @@ import no.nav.bidrag.domene.util.trimToNull
 import org.springframework.core.convert.converter.Converter
 import java.time.LocalDate
 
-class PersonIdent(override val verdi: String) : Verdiobjekt<String>() {
+class Personident(override val verdi: String) : Verdiobjekt<String>() {
 
     fun erDNummer() = verdi.substring(0, 1).toInt() in 4..7
     fun erNAVSyntetisk() = verdi.substring(2, 3).toInt() in 4..7
@@ -66,16 +66,16 @@ class PersonIdent(override val verdi: String) : Verdiobjekt<String>() {
     }
 }
 
-class PersonIdentReadingConverter : Converter<String, PersonIdent> {
-    override fun convert(source: String) = source.trimToNull()?.let { PersonIdent(source) }
+class PersonIdentReadingConverter : Converter<String, Personident> {
+    override fun convert(source: String) = source.trimToNull()?.let { Personident(source) }
 }
 
-class PersonIdentWritingConverter : Converter<PersonIdent, String> {
+class PersonIdentWritingConverter : Converter<Personident, String> {
 
-    override fun convert(source: PersonIdent) = source.verdi.trimToNull()
+    override fun convert(source: Personident) = source.verdi.trimToNull()
 }
 
-class PersonIdentConverter : AttributeConverter<PersonIdent, String> {
-    override fun convertToEntityAttribute(source: String?) = source?.trimToNull()?.let { PersonIdent(source) }
-    override fun convertToDatabaseColumn(source: PersonIdent?) = source?.verdi.trimToNull()
+class PersonIdentConverter : AttributeConverter<Personident, String> {
+    override fun convertToEntityAttribute(source: String?) = source?.trimToNull()?.let { Personident(source) }
+    override fun convertToDatabaseColumn(source: Personident?) = source?.verdi.trimToNull()
 }

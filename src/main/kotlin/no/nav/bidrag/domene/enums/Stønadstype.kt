@@ -1,6 +1,6 @@
 package no.nav.bidrag.domene.enums
 
-enum class StønadType {
+enum class Stønadstype {
     BIDRAG,
     FORSKUDD,
     BIDRAG18AAR,

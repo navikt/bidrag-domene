@@ -1,6 +1,6 @@
 package no.nav.bidrag.domene.enums
 
-enum class SaerfradragKode {
+enum class Saerfradragskode {
     INGEN,
     HALVT,
     HELT,

@@ -1,6 +1,6 @@
 package no.nav.bidrag.domene.enums
 
-enum class EngangsbeløpType {
+enum class Engangsbeløptype {
     DIREKTE_OPPGJOR,
     ETTERGIVELSE,
     ETTERGIVELSE_TILBAKEKREVING,
