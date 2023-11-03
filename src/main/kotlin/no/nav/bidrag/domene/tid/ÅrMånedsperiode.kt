@@ -14,7 +14,7 @@ data class ÅrMånedsperiode(override val fom: YearMonth, override val til: Year
     val fomMåned get() = FomMåned(fom)
     val tilMåned get() = til?.let { TilMåned(it) }
     val fomDato get() = FomDato(fom.atDay(1))
-    val tilDato get() = til?.let { TilDato(it.atEndOfMonth()) }
+    val tilDato get() = til?.let { TilDato(it.atDay(1)) }
 
     constructor(fom: LocalDate, til: LocalDate?) : this(YearMonth.from(fom), til?.let { YearMonth.from(til) })
 
