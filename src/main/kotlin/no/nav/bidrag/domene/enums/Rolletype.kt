@@ -4,7 +4,9 @@ package no.nav.bidrag.domene.enums
 
 import com.fasterxml.jackson.annotation.JsonAlias
 import com.fasterxml.jackson.annotation.JsonProperty
+import io.swagger.v3.oas.annotations.media.Schema
 
+@Schema(enumAsRef = true)
 enum class Rolletype {
     @JsonProperty("BA")
     @JsonAlias("BARN")
