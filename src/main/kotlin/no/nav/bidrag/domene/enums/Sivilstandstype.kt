@@ -2,6 +2,9 @@
 
 package no.nav.bidrag.domene.enums
 
+import io.swagger.v3.oas.annotations.media.Schema
+
+@Schema(enumAsRef = true)
 enum class Sivilstandstype {
     ENKE_ELLER_ENKEMANN,
     GIFT,

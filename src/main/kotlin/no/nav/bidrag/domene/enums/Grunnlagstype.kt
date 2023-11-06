@@ -1,8 +1,11 @@
 package no.nav.bidrag.domene.enums
 
+import io.swagger.v3.oas.annotations.media.Schema
+
 /**
  * Typer grunnlag som benyttes i behandling
  */
+@Schema(enumAsRef = true)
 enum class Grunnlagstype(val value: String) {
     SAERFRADRAG(GrunnlagstypeConstants.SAERFRADRAG),
     SOKNADSBARN_INFO(GrunnlagstypeConstants.SOKNADSBARN_INFO),
