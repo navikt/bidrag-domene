@@ -17,7 +17,7 @@ data class Datoperiode(override val fom: LocalDate, override val til: LocalDate?
     val fomDato get() = FomDato(fom)
     val tilDato get() = til?.let { TilDato(it) }
 
-    constructor(fom: YearMonth, til: YearMonth?) : this(fom.atDay(1), til?.atEndOfMonth())
+    constructor(fom: YearMonth, til: YearMonth?) : this(fom.atDay(1), til?.atDay(1))
     constructor(fom: String, til: String) : this(LocalDate.parse(fom), LocalDate.parse(til))
     constructor(periode: Pair<String, String>) : this(periode.first, periode.second)
 

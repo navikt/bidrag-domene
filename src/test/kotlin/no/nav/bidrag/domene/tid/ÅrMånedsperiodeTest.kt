@@ -142,7 +142,7 @@ internal class ÅrMånedsperiodeTest {
     @Test
     fun `union returnerer riktig periode for påfølgende perioder`() {
         val periode1 = Datoperiode(YearMonth.of(2019, 1), YearMonth.of(2019, 5))
-        val periode2 = Datoperiode(YearMonth.of(2018, 1), YearMonth.of(2018, 12))
+        val periode2 = Datoperiode(YearMonth.of(2018, 1), YearMonth.of(2019, 1))
 
         val union = periode1 union periode2
 
