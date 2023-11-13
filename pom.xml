@@ -22,7 +22,7 @@
     <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
     <mockk.version>1.13.2</mockk.version>
     <kotest.version>5.8.0</kotest.version>
-    <swagger.version>2.2.18</swagger.version>
+    <swagger.version>2.2.19</swagger.version>
     <java.version>1.8</java.version>
   </properties>
 
