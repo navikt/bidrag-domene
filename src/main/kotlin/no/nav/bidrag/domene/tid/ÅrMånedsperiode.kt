@@ -2,9 +2,11 @@
 
 package no.nav.bidrag.domene.tid
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import java.time.LocalDate
 import java.time.YearMonth
 
+@JsonIgnoreProperties("fomMåned", "tilMåned", "fomDato", "tilDato")
 data class ÅrMånedsperiode(override val fom: YearMonth, override val til: YearMonth?) : Periode<YearMonth>() {
 
     init {
