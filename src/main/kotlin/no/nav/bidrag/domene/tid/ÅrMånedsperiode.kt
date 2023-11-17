@@ -2,25 +2,16 @@
 
 package no.nav.bidrag.domene.tid
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import java.time.LocalDate
 import java.time.YearMonth
 
-@JsonIgnoreProperties("fomMåned", "tilMåned", "fomDato", "tilDato")
 data class ÅrMånedsperiode(override val fom: YearMonth, override val til: YearMonth?) : Periode<YearMonth>() {
 
     init {
         validate()
     }
 
-    val fomMåned get() = FomMåned(fom)
-    val tilMåned get() = til?.let { TilMåned(it) }
-    val fomDato get() = FomDato(fom.atDay(1))
-    val tilDato get() = til?.let { TilDato(it.atDay(1)) }
-
     constructor(fom: LocalDate, til: LocalDate?) : this(YearMonth.from(fom), til?.let { YearMonth.from(til) })
-
-    constructor(fomMåned: FomMåned, tilMåned: TilMåned? = null) : this(fomMåned.verdi, tilMåned?.verdi)
 
     constructor(fom: String, til: String) : this(YearMonth.parse(fom), YearMonth.parse(til))
 

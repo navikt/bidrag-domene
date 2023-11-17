@@ -7,8 +7,8 @@ import io.swagger.v3.oas.annotations.media.Schema
  */
 @Schema(enumAsRef = true)
 enum class Grunnlagstype(val value: String) {
-    SAERFRADRAG(GrunnlagstypeConstants.SAERFRADRAG),
-    SOKNADSBARN_INFO(GrunnlagstypeConstants.SOKNADSBARN_INFO),
+    SÆRFRADRAG(GrunnlagstypeConstants.SÆRFRADRAG),
+    SØKNADSBARN_INFO(GrunnlagstypeConstants.SØKNADSBARN_INFO),
     SKATTEKLASSE(GrunnlagstypeConstants.SKATTEKLASSE),
     BARN_I_HUSSTAND(GrunnlagstypeConstants.BARN_I_HUSSTAND),
     BOSTATUS(GrunnlagstypeConstants.BOSTATUS),
@@ -18,14 +18,14 @@ enum class Grunnlagstype(val value: String) {
     INNTEKT_UTVIDET_BARNETRYGD(GrunnlagstypeConstants.INNTEKT_UTVIDET_BARNETRYGD),
     KAPITALINNTEKT(GrunnlagstypeConstants.KAPITALINNTEKT),
     KAPITALINNTEKT_BARN(GrunnlagstypeConstants.KAPITALINNTEKT_BARN),
-    NETTO_SAERTILSKUDD(GrunnlagstypeConstants.NETTO_SAERTILSKUDD),
-    SAMVAERSKLASSE(GrunnlagstypeConstants.SAMVAERSKLASSE),
+    NETTO_SÆRTILSKUDD(GrunnlagstypeConstants.NETTO_SÆRTILSKUDD),
+    SAMVÆRSKLASSE(GrunnlagstypeConstants.SAMVÆRSKLASSE),
     BIDRAGSEVNE(GrunnlagstypeConstants.BIDRAGSEVNE),
-    SAMVAERSFRADRAG(GrunnlagstypeConstants.SAMVAERSFRADRAG),
+    SAMVÆRSFRADRAG(GrunnlagstypeConstants.SAMVÆRSFRADRAG),
     SJABLON(GrunnlagstypeConstants.SJABLON),
-    LOPENDE_BIDRAG(GrunnlagstypeConstants.LOPENDE_BIDRAG),
+    LØPENDE_BIDRAG(GrunnlagstypeConstants.LØPENDE_BIDRAG),
     FAKTISK_UTGIFT(GrunnlagstypeConstants.FAKTISK_UTGIFT),
-    BARNETILSYN_MED_STONAD(GrunnlagstypeConstants.BARNETILSYN_MED_STONAD),
+    BARNETILSYN_MED_STØNAD(GrunnlagstypeConstants.BARNETILSYN_MED_STØNAD),
     FORPLEINING_UTGIFT(GrunnlagstypeConstants.FORPLEINING_UTGIFT),
     BARN(GrunnlagstypeConstants.BARN),
     SIVILSTAND(GrunnlagstypeConstants.SIVILSTAND),
@@ -37,15 +37,15 @@ enum class Grunnlagstype(val value: String) {
     BPS_ANDEL_UNDERHOLDSKOSTNAD(GrunnlagstypeConstants.BPS_ANDEL_UNDERHOLDSKOSTNAD),
     TILLEGGSBIDRAG(GrunnlagstypeConstants.TILLEGGSBIDRAG),
     MAKS_BIDRAG_PER_BARN(GrunnlagstypeConstants.MAKS_BIDRAG_PER_BARN),
-    BPS_ANDEL_SAERTILSKUDD(GrunnlagstypeConstants.BPS_ANDEL_SAERTILSKUDD),
+    BPS_ANDEL_SÆRTILSKUDD(GrunnlagstypeConstants.BPS_ANDEL_SÆRTILSKUDD),
     MAKS_GRENSE_25_INNTEKT(GrunnlagstypeConstants.MAKS_GRENSE_25_INNTEKT),
     GEBYRFRITAK(GrunnlagstypeConstants.GEBYRFRITAK),
-    SOKNAD_INFO(GrunnlagstypeConstants.SOKNAD_INFO),
+    SØKNAD_INFO(GrunnlagstypeConstants.SØKNAD_INFO),
     BARN_INFO(GrunnlagstypeConstants.BARN_INFO),
     PERSON_INFO(GrunnlagstypeConstants.PERSON_INFO),
     SAKSBEHANDLER_INFO(GrunnlagstypeConstants.SAKSBEHANDLER_INFO),
     VEDTAK_INFO(GrunnlagstypeConstants.VEDTAK_INFO),
-    INNBETALT_BELOP(GrunnlagstypeConstants.INNBETALT_BELOP),
+    INNBETALT_BELØP(GrunnlagstypeConstants.INNBETALT_BELØP),
     FORHOLDSMESSIG_FORDELING(GrunnlagstypeConstants.FORHOLDSMESSIG_FORDELING),
     SLUTTBEREGNING_BBM(GrunnlagstypeConstants.SLUTTBEREGNING_BBM),
     KLAGE_STATISTIKK(GrunnlagstypeConstants.KLAGE_STATISTIKK),
@@ -58,8 +58,8 @@ enum class Grunnlagstype(val value: String) {
     ;
 
     object GrunnlagstypeConstants {
-        const val SAERFRADRAG = "SAERFRADRAG"
-        const val SOKNADSBARN_INFO = "SOKNADSBARN_INFO"
+        const val SÆRFRADRAG = "SÆRFRADRAG"
+        const val SØKNADSBARN_INFO = "SØKNADSBARN_INFO"
         const val SKATTEKLASSE = "SKATTEKLASSE"
         const val BARN_I_HUSSTAND = "BARN_I_HUSSTAND"
         const val BOSTATUS = "BOSTATUS"
@@ -69,14 +69,14 @@ enum class Grunnlagstype(val value: String) {
         const val INNTEKT_UTVIDET_BARNETRYGD = "INNTEKT_UTVIDET_BARNETRYGD"
         const val KAPITALINNTEKT = "KAPITALINNTEKT"
         const val KAPITALINNTEKT_BARN = "KAPITALINNTEKT_BARN"
-        const val NETTO_SAERTILSKUDD = "NETTO_SAERTILSKUDD"
-        const val SAMVAERSKLASSE = "SAMVAERSKLASSE"
+        const val NETTO_SÆRTILSKUDD = "NETTO_SÆRTILSKUDD"
+        const val SAMVÆRSKLASSE = "SAMVÆRSKLASSE"
         const val BIDRAGSEVNE = "BIDRAGSEVNE"
-        const val SAMVAERSFRADRAG = "SAMVAERSFRADRAG"
+        const val SAMVÆRSFRADRAG = "SAMVÆRSFRADRAG"
         const val SJABLON = "SJABLON"
-        const val LOPENDE_BIDRAG = "LOPENDE_BIDRAG"
+        const val LØPENDE_BIDRAG = "LØPENDE_BIDRAG"
         const val FAKTISK_UTGIFT = "FAKTISK_UTGIFT"
-        const val BARNETILSYN_MED_STONAD = "BARNETILSYN_MED_STONAD"
+        const val BARNETILSYN_MED_STØNAD = "BARNETILSYN_MED_STØNAD"
         const val FORPLEINING_UTGIFT = "FORPLEINING_UTGIFT"
         const val BARN = "BARN"
         const val SIVILSTAND = "SIVILSTAND"
@@ -88,15 +88,15 @@ enum class Grunnlagstype(val value: String) {
         const val BPS_ANDEL_UNDERHOLDSKOSTNAD = "BPS_ANDEL_UNDERHOLDSKOSTNAD"
         const val TILLEGGSBIDRAG = "TILLEGGSBIDRAG"
         const val MAKS_BIDRAG_PER_BARN = "MAKS_BIDRAG_PER_BARN"
-        const val BPS_ANDEL_SAERTILSKUDD = "BPS_ANDEL_SAERTILSKUDD"
+        const val BPS_ANDEL_SÆRTILSKUDD = "BPS_ANDEL_SÆRTILSKUDD"
         const val MAKS_GRENSE_25_INNTEKT = "MAKS_GRENSE_25_INNTEKT"
         const val GEBYRFRITAK = "GEBYRFRITAK"
-        const val SOKNAD_INFO = "SOKNAD_INFO"
+        const val SØKNAD_INFO = "SØKNAD_INFO"
         const val BARN_INFO = "BARN_INFO"
         const val PERSON_INFO = "PERSON_INFO"
         const val SAKSBEHANDLER_INFO = "SAKSBEHANDLER_INFO"
         const val VEDTAK_INFO = "VEDTAK_INFO"
-        const val INNBETALT_BELOP = "INNBETALT_BELOP"
+        const val INNBETALT_BELØP = "INNBETALT_BELØP"
         const val FORHOLDSMESSIG_FORDELING = "FORHOLDSMESSIG_FORDELING"
         const val SLUTTBEREGNING_BBM = "SLUTTBEREGNING_BBM"
         const val KLAGE_STATISTIKK = "KLAGE_STATISTIKK"

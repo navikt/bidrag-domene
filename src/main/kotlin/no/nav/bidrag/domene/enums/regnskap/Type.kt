@@ -7,5 +7,6 @@ import io.swagger.v3.oas.annotations.media.Schema
         "Deretter skal alle konteringer for samme stønad i samme periode markere ENDRING, altså B3-konteringen og for alle påfølgende B1-konteringer.",
 )
 enum class Type {
-    NY, ENDRING
+    NY,
+    ENDRING,
 }

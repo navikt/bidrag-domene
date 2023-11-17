@@ -11,12 +11,6 @@ data class Datoperiode(override val fom: LocalDate, override val til: LocalDate?
         validate()
     }
 
-    val fomMåned get() = FomMåned(YearMonth.from(fom))
-    val tilMåned get() = til?.let { FomMåned(YearMonth.from(it)) }
-
-    val fomDato get() = FomDato(fom)
-    val tilDato get() = til?.let { TilDato(it) }
-
     constructor(fom: YearMonth, til: YearMonth?) : this(fom.atDay(1), til?.atDay(1))
     constructor(fom: String, til: String) : this(LocalDate.parse(fom), LocalDate.parse(til))
     constructor(periode: Pair<String, String>) : this(periode.first, periode.second)

@@ -15,7 +15,7 @@ import java.time.format.DateTimeFormatter
 
 internal class ÅrMånedsperiodeTest {
 
-    val objectMapper = ObjectMapper()
+    private val objectMapper = ObjectMapper()
         .registerKotlinModule()
         .registerModule(
             JavaTimeModule()

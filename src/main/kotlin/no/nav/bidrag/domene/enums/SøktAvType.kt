@@ -6,7 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema
 enum class SøktAvType(val kode: String) {
     BIDRAGSMOTTAKER("MO"),
     BIDRAGSPLIKTIG("PL"),
-    BARN_18_AAR("BB"),
+    BARN_18_ÅR("BB"),
     BM_I_ANNEN_SAK("AS"),
     NAV_BIDRAG("ET"), // TK
     FYLKESNEMDA("FN"),
@@ -17,7 +17,6 @@ enum class SøktAvType(val kode: String) {
     VERGE("VE"),
     TRYGDEETATEN_INNKREVING("TI"),
     KLAGE_ANKE("FK"), // FTK
-
     KONVERTERING("KV"), // Kodeverdi som brukes i eldre overførte saker i Bisys. Ikke bruk
     ;
 
