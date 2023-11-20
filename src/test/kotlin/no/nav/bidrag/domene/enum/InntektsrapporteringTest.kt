@@ -1,8 +1,8 @@
 package no.nav.bidrag.domene.enum
 
 import io.kotest.matchers.shouldBe
-import no.nav.bidrag.domene.enums.Inntektsrapportering
-import no.nav.bidrag.domene.enums.Inntektsrapportering.Companion.kanBrukesSammenMed
+import no.nav.bidrag.domene.enums.inntekt.Inntektsrapportering
+import no.nav.bidrag.domene.enums.inntekt.Inntektsrapportering.Companion.kanBrukesSammenMed
 import org.junit.jupiter.api.Test
 
 class InntektsrapporteringTest {
