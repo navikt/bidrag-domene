@@ -1,16 +1,16 @@
 package no.nav.bidrag.domene.enums.sjablon
 
 enum class SjablonInnholdNavn(val navn: String) {
-    BARNETILSYN_BELOP("BarnetilsynBeløp"),
-    BOUTGIFT_BELOP("BoutgiftBeløp"),
-    UNDERHOLD_BELOP("UnderholdBeløp"),
-    FORBRUK_TOTAL_BELOP("ForbrukTotalBeløp"),
-    MAKS_FRADRAG_BELOP("MaksFradragBeløp"),
-    MAKS_TILSYN_BELOP("MaksTilsynBeløp"),
+    BARNETILSYN_BELØP("BarnetilsynBeløp"),
+    BOUTGIFT_BELØP("BoutgiftBeløp"),
+    UNDERHOLD_BELØP("UnderholdBeløp"),
+    FORBRUK_TOTAL_BELØP("ForbrukTotalBeløp"),
+    MAKS_FRADRAG_BELØP("MaksFradragBeløp"),
+    MAKS_TILSYN_BELØP("MaksTilsynBeløp"),
     ANTALL_DAGER_TOM("AntallDagerTOM"),
     ANTALL_NETTER_TOM("AntallNetterTOM"),
-    FRADRAG_BELOP("FradragBeløp"),
+    FRADRAG_BELØP("FradragBeløp"),
     SJABLON_VERDI("SjablonVerdi"),
-    INNTEKTSGRENSE_BELOP("InntektsgrenseBeløp"),
+    INNTEKTSGRENSE_BELØP("InntektsgrenseBeløp"),
     SKATTESATS_PROSENT("SkattesatsProsent"),
 }

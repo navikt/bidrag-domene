@@ -8,6 +8,7 @@ import org.springframework.core.convert.converter.Converter
 import java.sql.Date
 import java.time.LocalDate
 
+@Deprecated("Bruk LocalDate i stedet")
 class FomDato(override val verdi: LocalDate) : Verdiobjekt<LocalDate>() {
 
     companion object {
@@ -17,14 +18,17 @@ class FomDato(override val verdi: LocalDate) : Verdiobjekt<LocalDate>() {
     }
 }
 
+@Deprecated("Bruk LocalDate i stedet")
 class FomDatoReadingConverter : Converter<Date, FomDato> {
     override fun convert(source: Date) = FomDato(source.toLocalDate())
 }
 
+@Deprecated("Bruk LocalDate i stedet")
 class FomDatoWritingConverter : Converter<FomDato, Date> {
     override fun convert(source: FomDato) = Date.valueOf(source.verdi)
 }
 
+@Deprecated("Bruk LocalDate i stedet")
 class FomDatoConverter : AttributeConverter<FomDato, LocalDate> {
     override fun convertToEntityAttribute(source: LocalDate?) = source?.let { FomDato(source) }
     override fun convertToDatabaseColumn(source: FomDato?) = source?.verdi

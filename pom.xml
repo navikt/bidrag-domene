@@ -22,7 +22,7 @@
     <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
     <mockk.version>1.13.2</mockk.version>
     <kotest.version>5.8.0</kotest.version>
-    <swagger.version>2.2.18</swagger.version>
+    <swagger.version>2.2.19</swagger.version>
     <java.version>1.8</java.version>
   </properties>
 
@@ -140,7 +140,7 @@
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-release-plugin</artifactId>
-              <version>2.5.3</version>
+              <version>3.0.1</version>
               <configuration>
                 <autoVersionSubmodules>true</autoVersionSubmodules>
                 <useReleaseProfile>true</useReleaseProfile>
@@ -169,12 +169,12 @@
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-surefire-plugin</artifactId>
-              <version>3.2.1</version>
+              <version>3.2.2</version>
             </plugin>
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-failsafe-plugin</artifactId>
-              <version>2.22.0</version>
+              <version>3.2.2</version>
             </plugin>
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
