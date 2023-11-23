@@ -16,15 +16,16 @@ import java.net.URL
 typealias VisningsnavnKodeMap = Map<String, Visningsnavn>
 private val objectmapper = ObjectMapper(YAMLFactory()).findAndRegisterModules().registerKotlinModule()
 private val visningsnavnCache: Map<String, VisningsnavnKodeMap> = emptyMap()
+
 data class Visningsnavn(
     val intern: String,
-    val bruker: Map<Språk, String>,
+    val bruker: Map<Språk, String> = mapOf(Språk.NB to intern),
 )
+
 val Inntektsrapportering.visningsnavn get() = lastVisningsnavnFraFil("inntekttype.yaml")[name]
 fun Inntektsrapportering.visningsnavnIntern(årstall: Int?) = "${visningsnavn?.intern} $årstall".trim()
 val Sivilstandskode.visningsnavn get() = lastVisningsnavnFraFil("sivilstand.yaml")[name]
-val Bostatuskode.visningsnavnForskudd get() = lastVisningsnavnFraFil("bostatus.yaml", "FORSKUDD")[name]
-val Bostatuskode.visningsnavn get() = lastVisningsnavnFraFil("bostatus.yaml", "ELLERS")[name]
+val Bostatuskode.visningsnavn get() = lastVisningsnavnFraFil("bostatus.yaml")[name]
 val ResultatkodeForskudd.visningsnavn get() = lastVisningsnavnFraFil("resultat.yaml", "FORSKUDD")[name]
 val ResultatkodeBarnebidrag.visningsnavn get() = lastVisningsnavnFraFil("resultat.yaml", "BARNEBIDRAG")[name]
 val ResultatkodeSærtilskudd.visningsnavn get() = lastVisningsnavnFraFil("resultat.yaml", "SÆRTILSKUDD")[name]

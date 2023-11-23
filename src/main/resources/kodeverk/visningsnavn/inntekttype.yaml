@@ -57,7 +57,7 @@ YTELSE_FRA_OFFENTLIG_MANUELT_BEREGNET:
 AAP:
   intern: "AAP"
   bruker:
-    NB: "AAP"
+    NB: "Arbeidsavklaringspenger"
 AINNTEKT_KORRIGERT_BARNETILLEGG:
   intern: "A-inntekt korrigert for barnetillegg"
   bruker:

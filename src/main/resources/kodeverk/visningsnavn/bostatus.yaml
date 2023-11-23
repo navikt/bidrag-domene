@@ -1,38 +1,12 @@
-FORSKUDD:
-  MED_FORELDER:
-    intern: "Registert på adresse"
-    bruker:
-      NB: "Registert på adresse"
-  DOKUMENTERT_SKOLEGANG:
-    intern: "Registert på adresse"
-    bruker:
-      NB: "Registert på adresse"
-  IKKE_MED_FORELDER:
-    intern: "Ikke registert på adresse"
-    bruker:
-      NB: "Ikke registert på adresse"
-ELLERS:
-  MED_FORELDER:
-    intern: "Bor med forelder"
-    bruker:
-      NB: "Bor med forelder"
-  DOKUMENTERT_SKOLEGANG:
-    intern: "Dokumentert skolegang"
-    bruker:
-      NB: "Går på skole og bor med forelder (over 18 år)"
-  IKKE_MED_FORELDER:
-    intern: "Bor ikke med forelder"
-    bruker:
-      NB: "Bor ikke med forelder"
-  MED_VERGE:
-    intern: "Bor med verge"
-    bruker:
-      NB: "Bor med verge"
-  ALENE:
-    intern: "Bor alene"
-    bruker:
-      NB: "Bor alene"
-  DELT_BOSTED:
-    intern: "Delt bosted"
-    bruker:
-      NB: "Delt bosted"
+MED_FORELDER:
+  intern: "Registert på adresse"
+DOKUMENTERT_SKOLEGANG:
+  intern: "Dokumentert skolegang"
+IKKE_MED_FORELDER:
+  intern: "Ikke registert på adresse"
+MED_VERGE:
+  intern: "Bor med verge"
+ALENE:
+  intern: "Bor alene"
+DELT_BOSTED:
+  intern: "Delt bosted"

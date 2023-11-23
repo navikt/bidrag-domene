@@ -52,34 +52,47 @@ class VisningsnavnTest {
     @Nested
     internal inner class BostatuskodeTest {
         @Test
-        fun `Skal hente visningsnavn for bostatus MED_FORELDER`() {
-            val visningsnavn = Bostatuskode.MED_FORELDER.visningsnavn!!
-
-            visningsnavn.intern shouldBe "Bor med forelder"
-            visningsnavn.bruker[Språk.NB] shouldBe "Bor med forelder"
-        }
-
-        @Test
-        fun `Skal hente visningsnavn for bostatus forskudd`() {
+        fun `Skal hente visningsnavn for bostatus`() {
             assertSoftly("Visningsnavn med forelder") {
-                val visningsnavn = Bostatuskode.MED_FORELDER.visningsnavnForskudd!!
+                val visningsnavn = Bostatuskode.MED_FORELDER.visningsnavn!!
 
                 visningsnavn.intern shouldBe "Registert på adresse"
                 visningsnavn.bruker[Språk.NB] shouldBe "Registert på adresse"
             }
 
             assertSoftly("Visningsnavn med dokumentert skolegang") {
-                val visningsnavn = Bostatuskode.DOKUMENTERT_SKOLEGANG.visningsnavnForskudd!!
+                val visningsnavn = Bostatuskode.DOKUMENTERT_SKOLEGANG.visningsnavn!!
 
-                visningsnavn.intern shouldBe "Registert på adresse"
-                visningsnavn.bruker[Språk.NB] shouldBe "Registert på adresse"
+                visningsnavn.intern shouldBe "Dokumentert skolegang"
+                visningsnavn.bruker[Språk.NB] shouldBe "Dokumentert skolegang"
             }
 
             assertSoftly("Visningsnavn med ikke med forelder") {
-                val visningsnavn = Bostatuskode.IKKE_MED_FORELDER.visningsnavnForskudd!!
+                val visningsnavn = Bostatuskode.IKKE_MED_FORELDER.visningsnavn!!
 
                 visningsnavn.intern shouldBe "Ikke registert på adresse"
                 visningsnavn.bruker[Språk.NB] shouldBe "Ikke registert på adresse"
+            }
+
+            assertSoftly("Visningsnavn med verge") {
+                val visningsnavn = Bostatuskode.MED_VERGE.visningsnavn!!
+
+                visningsnavn.intern shouldBe "Bor med verge"
+                visningsnavn.bruker[Språk.NB] shouldBe "Bor med verge"
+            }
+
+            assertSoftly("Visningsnavn alene") {
+                val visningsnavn = Bostatuskode.ALENE.visningsnavn!!
+
+                visningsnavn.intern shouldBe "Bor alene"
+                visningsnavn.bruker[Språk.NB] shouldBe "Bor alene"
+            }
+
+            assertSoftly("Visningsnavn delt bosted") {
+                val visningsnavn = Bostatuskode.DELT_BOSTED.visningsnavn!!
+
+                visningsnavn.intern shouldBe "Delt bosted"
+                visningsnavn.bruker[Språk.NB] shouldBe "Delt bosted"
             }
         }
     }
