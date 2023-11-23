@@ -1,0 +1,113 @@
+package no.nav.bidrag.domene.util
+
+import io.kotest.assertions.assertSoftly
+import io.kotest.matchers.shouldBe
+import no.nav.bidrag.domene.enums.beregning.ResultatkodeBarnebidrag
+import no.nav.bidrag.domene.enums.beregning.ResultatkodeForskudd
+import no.nav.bidrag.domene.enums.beregning.ResultatkodeSærtilskudd
+import no.nav.bidrag.domene.enums.diverse.Språk
+import no.nav.bidrag.domene.enums.inntekt.Inntektsrapportering
+import no.nav.bidrag.domene.enums.person.Bostatuskode
+import no.nav.bidrag.domene.enums.person.Sivilstandskode
+import org.junit.jupiter.api.Nested
+import org.junit.jupiter.api.Test
+
+class VisningsnavnTest {
+
+    @Nested
+    internal inner class InntektsrapporteringTest {
+        @Test
+        fun `Skal hente visningsnavn for inntekt AINNTEKT_BEREGNET_12MND`() {
+            val visningsnavn = Inntektsrapportering.AINNTEKT_BEREGNET_12MND.visningsnavn!!
+            val visningsnavnSaksbehandler = Inntektsrapportering.AINNTEKT_BEREGNET_12MND.visningsnavnIntern(2020)
+
+            visningsnavn.intern shouldBe "Lønn og trekk siste 12 mnd"
+            visningsnavnSaksbehandler shouldBe "Lønn og trekk siste 12 mnd 2020"
+            visningsnavn.bruker[Språk.NB] shouldBe "Lønn og trekk siste 12 mnd"
+        }
+
+        @Test
+        fun `Skal hente visningsnavn for inntekt KAPITALINNTEKT`() {
+            val visningsnavn = Inntektsrapportering.KAPITALINNTEKT.visningsnavn!!
+            val visningsnavnSaksbehandler = Inntektsrapportering.KAPITALINNTEKT.visningsnavnIntern(2020)
+
+            visningsnavn.intern shouldBe "Sigrun kapitalinntekt (KAPS)"
+            visningsnavnSaksbehandler shouldBe "Sigrun kapitalinntekt (KAPS) 2020"
+            visningsnavn.bruker[Språk.NB] shouldBe "Kapitalinntekt"
+        }
+    }
+
+    @Nested
+    internal inner class SivilstandTest {
+        @Test
+        fun `Skal hente visningsnavn for sivilstand AINNTEKT_BEREGNET_12MND`() {
+            val visningsnavn = Sivilstandskode.ENKE_ELLER_ENKEMANN.visningsnavn!!
+
+            Bostatuskode.MED_FORELDER.visningsnavn
+            visningsnavn.intern shouldBe "Enke eller enkemann"
+            visningsnavn.bruker[Språk.NB] shouldBe "Enke eller enkemann"
+        }
+    }
+
+    @Nested
+    internal inner class BostatuskodeTest {
+        @Test
+        fun `Skal hente visningsnavn for bostatus MED_FORELDER`() {
+            val visningsnavn = Bostatuskode.MED_FORELDER.visningsnavn!!
+
+            visningsnavn.intern shouldBe "Bor med forelder"
+            visningsnavn.bruker[Språk.NB] shouldBe "Bor med forelder"
+        }
+
+        @Test
+        fun `Skal hente visningsnavn for bostatus forskudd`() {
+            assertSoftly("Visningsnavn med forelder") {
+                val visningsnavn = Bostatuskode.MED_FORELDER.visningsnavnForskudd!!
+
+                visningsnavn.intern shouldBe "Registert på adresse"
+                visningsnavn.bruker[Språk.NB] shouldBe "Registert på adresse"
+            }
+
+            assertSoftly("Visningsnavn med dokumentert skolegang") {
+                val visningsnavn = Bostatuskode.DOKUMENTERT_SKOLEGANG.visningsnavnForskudd!!
+
+                visningsnavn.intern shouldBe "Registert på adresse"
+                visningsnavn.bruker[Språk.NB] shouldBe "Registert på adresse"
+            }
+
+            assertSoftly("Visningsnavn med ikke med forelder") {
+                val visningsnavn = Bostatuskode.IKKE_MED_FORELDER.visningsnavnForskudd!!
+
+                visningsnavn.intern shouldBe "Ikke registert på adresse"
+                visningsnavn.bruker[Språk.NB] shouldBe "Ikke registert på adresse"
+            }
+        }
+    }
+
+    @Nested
+    internal inner class ResultatkodeTest {
+        @Test
+        fun `Skal hente visningsnavn for forskudd resultatkode FORHØYET_FORSKUDD_100_PROSENT`() {
+            val visningsnavn = ResultatkodeForskudd.FORHØYET_FORSKUDD_100_PROSENT.visningsnavn!!
+
+            visningsnavn.intern shouldBe "Forhøyet forskudd"
+            visningsnavn.bruker[Språk.NB] shouldBe "Forhøyet forskudd"
+        }
+
+        @Test
+        fun `Skal hente visningsnavn for særtilskudd esultatkode BARNET_ER_SELVFORSØRGET`() {
+            val visningsnavn = ResultatkodeSærtilskudd.BARNET_ER_SELVFORSØRGET.visningsnavn!!
+
+            visningsnavn.intern shouldBe "Barnet er selvforsørget"
+            visningsnavn.bruker[Språk.NB] shouldBe "Barnet er selvforsørget"
+        }
+
+        @Test
+        fun `Skal hente visningsnavn for barnebidrag esultatkode KOSTNADSBEREGNET_BIDRAG`() {
+            val visningsnavn = ResultatkodeBarnebidrag.KOSTNADSBEREGNET_BIDRAG.visningsnavn!!
+
+            visningsnavn.intern shouldBe "Kostnadsberegnet bidrag"
+            visningsnavn.bruker[Språk.NB] shouldBe "Kostnadsberegnet bidrag"
+        }
+    }
+}

@@ -79,6 +79,11 @@
       <version>${jackson.version}</version>
     </dependency>
     <dependency>
+      <groupId>com.fasterxml.jackson.dataformat</groupId>
+      <artifactId>jackson-dataformat-yaml</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
       <version>6.0.13</version>
@@ -93,6 +98,12 @@
       <artifactId>swagger-annotations</artifactId>
       <version>${swagger.version}</version>
     </dependency>
+      <dependency>
+          <groupId>com.fasterxml.jackson.module</groupId>
+          <artifactId>jackson-module-kotlin</artifactId>
+          <version>2.15.3</version>
+          <scope>compile</scope>
+      </dependency>
 
   </dependencies>
 
