@@ -1,48 +1,8 @@
-GIFT:
-  intern: "Gift"
+GIFT_SAMBOER:
+  intern: "Gift/samboer"
   bruker:
-    NB: "Gift"
-UGIFT:
-  intern: "Ugift"
+    NB: "Gift/samboer"
+BOR_ALENE_MED_BARN:
+  intern: "Bor alene med barn"
   bruker:
-    NB: "Ugift"
-ENSLIG:
-  intern: "Enslig"
-  bruker:
-    NB: "Enslig"
-SAMBOER:
-  intern: "Samboer"
-  bruker:
-    NB: "Samboer"
-UOPPGITT:
-  intern: "Uoppgitt"
-  bruker:
-    NB: "Uoppgitt"
-ENKE_ELLER_ENKEMANN:
-  intern: "Enke eller enkemann"
-  bruker:
-    NB: "Enke eller enkemann"
-SKILT:
-  intern: "Skilt"
-  bruker:
-    NB: "Skilt"
-SEPARERT:
-  intern: "Separert"
-  bruker:
-    NB: "Separert"
-REGISTRERT_PARTNER:
-  intern: "Registrert partner"
-  bruker:
-    NB: "Registrert partner"
-SEPARERT_PARTNER:
-  intern: "Separert partner"
-  bruker:
-    NB: "Separert partner"
-SKILT_PARTNER:
-  intern: "Skilt partner"
-  bruker:
-    NB: "Skilt partner"
-GJENLEVENDE_PARTNER:
-  intern: "Gjenlevende partner"
-  bruker:
-    NB: "Gjenlevende partner"
+    NB: "Bor alene med barn"

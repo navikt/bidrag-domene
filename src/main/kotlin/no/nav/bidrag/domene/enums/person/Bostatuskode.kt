@@ -10,4 +10,5 @@ enum class Bostatuskode {
     MED_VERGE,
     ALENE,
     DELT_BOSTED,
+    REGNES_IKKE_SOM_BARN, // TODO: Avklar (faglig) om dette skal brukes
 }

@@ -1,6 +1,7 @@
 package no.nav.bidrag.domene.util
 
 import io.kotest.assertions.assertSoftly
+import io.kotest.assertions.withClue
 import io.kotest.matchers.shouldBe
 import no.nav.bidrag.domene.enums.beregning.ResultatkodeBarnebidrag
 import no.nav.bidrag.domene.enums.beregning.ResultatkodeForskudd
@@ -8,7 +9,7 @@ import no.nav.bidrag.domene.enums.beregning.ResultatkodeSærtilskudd
 import no.nav.bidrag.domene.enums.diverse.Språk
 import no.nav.bidrag.domene.enums.inntekt.Inntektsrapportering
 import no.nav.bidrag.domene.enums.person.Bostatuskode
-import no.nav.bidrag.domene.enums.person.Sivilstandskode
+import no.nav.bidrag.domene.enums.person.SivilstandskodeBeregning
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 
@@ -16,9 +17,19 @@ class VisningsnavnTest {
 
     @Nested
     internal inner class InntektsrapporteringTest {
+
+        @Test
+        fun `Valider at alle kodeverdier har visningsnavn`() {
+            Inntektsrapportering.entries.forEach {
+                withClue("${it.name} mangler visningsnavn") {
+                    it.visningsnavn.intern.isNotEmpty() shouldBe true
+                }
+            }
+        }
+
         @Test
         fun `Skal hente visningsnavn for inntekt AINNTEKT_BEREGNET_12MND`() {
-            val visningsnavn = Inntektsrapportering.AINNTEKT_BEREGNET_12MND.visningsnavn!!
+            val visningsnavn = Inntektsrapportering.AINNTEKT_BEREGNET_12MND.visningsnavn
             val visningsnavnSaksbehandler = Inntektsrapportering.AINNTEKT_BEREGNET_12MND.visningsnavnIntern(2020)
 
             visningsnavn.intern shouldBe "Lønn og trekk siste 12 mnd"
@@ -28,7 +39,7 @@ class VisningsnavnTest {
 
         @Test
         fun `Skal hente visningsnavn for inntekt KAPITALINNTEKT`() {
-            val visningsnavn = Inntektsrapportering.KAPITALINNTEKT.visningsnavn!!
+            val visningsnavn = Inntektsrapportering.KAPITALINNTEKT.visningsnavn
             val visningsnavnSaksbehandler = Inntektsrapportering.KAPITALINNTEKT.visningsnavnIntern(2020)
 
             visningsnavn.intern shouldBe "Sigrun kapitalinntekt (KAPS)"
@@ -40,17 +51,35 @@ class VisningsnavnTest {
     @Nested
     internal inner class SivilstandTest {
         @Test
+        fun `Valider at alle kodeverdier har visningsnavn`() {
+            SivilstandskodeBeregning.entries.forEach {
+                withClue("${it.name} mangler visningsnavn") {
+                    it.visningsnavn.intern.isNotEmpty() shouldBe true
+                }
+            }
+        }
+
+        @Test
         fun `Skal hente visningsnavn for sivilstand AINNTEKT_BEREGNET_12MND`() {
-            val visningsnavn = Sivilstandskode.ENKE_ELLER_ENKEMANN.visningsnavn!!
+            val visningsnavn = SivilstandskodeBeregning.GIFT_SAMBOER.visningsnavn
 
             Bostatuskode.MED_FORELDER.visningsnavn
-            visningsnavn.intern shouldBe "Enke eller enkemann"
-            visningsnavn.bruker[Språk.NB] shouldBe "Enke eller enkemann"
+            visningsnavn.intern shouldBe "Gift/Samboer"
+            visningsnavn.bruker[Språk.NB] shouldBe "Gift/Samboer"
         }
     }
 
     @Nested
     internal inner class BostatuskodeTest {
+        @Test
+        fun `Valider at alle kodeverdier har visningsnavn`() {
+            Bostatuskode.entries.forEach {
+                withClue("${it.name} mangler visningsnavn") {
+                    it.visningsnavn.intern.isNotEmpty() shouldBe true
+                }
+            }
+        }
+
         @Test
         fun `Skal hente visningsnavn for bostatus`() {
             assertSoftly("Visningsnavn med forelder") {
@@ -99,6 +128,25 @@ class VisningsnavnTest {
 
     @Nested
     internal inner class ResultatkodeTest {
+        @Test
+        fun `Valider at alle kodeverdier har visningsnavn`() {
+            ResultatkodeForskudd.entries.forEach {
+                withClue("${it.name} mangler visningsnavn") {
+                    it.visningsnavn.intern.isNotEmpty() shouldBe true
+                }
+            }
+            ResultatkodeSærtilskudd.entries.forEach {
+                withClue("${it.name} mangler visningsnavn") {
+                    it.visningsnavn.intern.isNotEmpty() shouldBe true
+                }
+            }
+            ResultatkodeBarnebidrag.entries.forEach {
+                withClue("${it.name} mangler visningsnavn") {
+                    it.visningsnavn.intern.isNotEmpty() shouldBe true
+                }
+            }
+        }
+
         @Test
         fun `Skal hente visningsnavn for forskudd resultatkode FORHØYET_FORSKUDD_100_PROSENT`() {
             val visningsnavn = ResultatkodeForskudd.FORHØYET_FORSKUDD_100_PROSENT.visningsnavn!!
