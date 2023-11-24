@@ -63,9 +63,8 @@ class VisningsnavnTest {
         fun `Skal hente visningsnavn for sivilstand AINNTEKT_BEREGNET_12MND`() {
             val visningsnavn = SivilstandskodeBeregning.GIFT_SAMBOER.visningsnavn
 
-            Bostatuskode.MED_FORELDER.visningsnavn
-            visningsnavn.intern shouldBe "Gift/Samboer"
-            visningsnavn.bruker[Språk.NB] shouldBe "Gift/Samboer"
+            visningsnavn.intern shouldBe "Gift/samboer"
+            visningsnavn.bruker[Språk.NB] shouldBe "Gift/samboer"
         }
     }
 
