@@ -1,3 +1,4 @@
+
 package no.nav.bidrag.domene.enums.regnskap
 
 import no.nav.bidrag.domene.enums.vedtak.Engangsbeløptype
