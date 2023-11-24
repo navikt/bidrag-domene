@@ -82,42 +82,42 @@ class VisningsnavnTest {
         @Test
         fun `Skal hente visningsnavn for bostatus`() {
             assertSoftly("Visningsnavn med forelder") {
-                val visningsnavn = Bostatuskode.MED_FORELDER.visningsnavn!!
+                val visningsnavn = Bostatuskode.MED_FORELDER.visningsnavn
 
                 visningsnavn.intern shouldBe "Registert på adresse"
                 visningsnavn.bruker[Språk.NB] shouldBe "Registert på adresse"
             }
 
             assertSoftly("Visningsnavn med dokumentert skolegang") {
-                val visningsnavn = Bostatuskode.DOKUMENTERT_SKOLEGANG.visningsnavn!!
+                val visningsnavn = Bostatuskode.DOKUMENTERT_SKOLEGANG.visningsnavn
 
                 visningsnavn.intern shouldBe "Dokumentert skolegang"
                 visningsnavn.bruker[Språk.NB] shouldBe "Dokumentert skolegang"
             }
 
             assertSoftly("Visningsnavn med ikke med forelder") {
-                val visningsnavn = Bostatuskode.IKKE_MED_FORELDER.visningsnavn!!
+                val visningsnavn = Bostatuskode.IKKE_MED_FORELDER.visningsnavn
 
                 visningsnavn.intern shouldBe "Ikke registert på adresse"
                 visningsnavn.bruker[Språk.NB] shouldBe "Ikke registert på adresse"
             }
 
             assertSoftly("Visningsnavn med verge") {
-                val visningsnavn = Bostatuskode.MED_VERGE.visningsnavn!!
+                val visningsnavn = Bostatuskode.MED_VERGE.visningsnavn
 
                 visningsnavn.intern shouldBe "Bor med verge"
                 visningsnavn.bruker[Språk.NB] shouldBe "Bor med verge"
             }
 
             assertSoftly("Visningsnavn alene") {
-                val visningsnavn = Bostatuskode.ALENE.visningsnavn!!
+                val visningsnavn = Bostatuskode.ALENE.visningsnavn
 
                 visningsnavn.intern shouldBe "Bor alene"
                 visningsnavn.bruker[Språk.NB] shouldBe "Bor alene"
             }
 
             assertSoftly("Visningsnavn delt bosted") {
-                val visningsnavn = Bostatuskode.DELT_BOSTED.visningsnavn!!
+                val visningsnavn = Bostatuskode.DELT_BOSTED.visningsnavn
 
                 visningsnavn.intern shouldBe "Delt bosted"
                 visningsnavn.bruker[Språk.NB] shouldBe "Delt bosted"
@@ -148,7 +148,7 @@ class VisningsnavnTest {
 
         @Test
         fun `Skal hente visningsnavn for forskudd resultatkode FORHØYET_FORSKUDD_100_PROSENT`() {
-            val visningsnavn = ResultatkodeForskudd.FORHØYET_FORSKUDD_100_PROSENT.visningsnavn!!
+            val visningsnavn = ResultatkodeForskudd.FORHØYET_FORSKUDD_100_PROSENT.visningsnavn
 
             visningsnavn.intern shouldBe "Forhøyet forskudd"
             visningsnavn.bruker[Språk.NB] shouldBe "Forhøyet forskudd"
@@ -156,7 +156,7 @@ class VisningsnavnTest {
 
         @Test
         fun `Skal hente visningsnavn for særtilskudd esultatkode BARNET_ER_SELVFORSØRGET`() {
-            val visningsnavn = ResultatkodeSærtilskudd.BARNET_ER_SELVFORSØRGET.visningsnavn!!
+            val visningsnavn = ResultatkodeSærtilskudd.BARNET_ER_SELVFORSØRGET.visningsnavn
 
             visningsnavn.intern shouldBe "Barnet er selvforsørget"
             visningsnavn.bruker[Språk.NB] shouldBe "Barnet er selvforsørget"
@@ -164,7 +164,7 @@ class VisningsnavnTest {
 
         @Test
         fun `Skal hente visningsnavn for barnebidrag esultatkode KOSTNADSBEREGNET_BIDRAG`() {
-            val visningsnavn = ResultatkodeBarnebidrag.KOSTNADSBEREGNET_BIDRAG.visningsnavn!!
+            val visningsnavn = ResultatkodeBarnebidrag.KOSTNADSBEREGNET_BIDRAG.visningsnavn
 
             visningsnavn.intern shouldBe "Kostnadsberegnet bidrag"
             visningsnavn.bruker[Språk.NB] shouldBe "Kostnadsberegnet bidrag"

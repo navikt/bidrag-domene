@@ -7,7 +7,4 @@ enum class Beslutningstype {
     AVVIST,
     STADFESTELSE,
     ENDRING,
-
-    @Deprecated("STADSFESTELSE skal ikke brukes", ReplaceWith("STADFESTELSE"))
-    STADSFESTELSE,
 }
