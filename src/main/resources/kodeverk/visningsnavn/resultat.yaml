@@ -16,9 +16,9 @@ FORSKUDD:
     bruker:
       NB: "Forhøyet forskudd"
   FORHØYET_FORSKUDD_11_ÅR_125_PROSENT:
-    intern: "Forhøyet forskudd - 11 år"
+    intern: "Forhøyet forskudd ved 11 år"
     bruker:
-      NB: "Forhøyet forskudd - 11 år"
+      NB: "Forhøyet forskudd ved 11 år"
 BARNEBIDRAG:
   BARNET_ER_SELVFORSØRGET:
     intern: "Barnet er selvforsørget"

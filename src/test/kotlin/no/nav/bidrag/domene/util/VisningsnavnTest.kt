@@ -9,7 +9,7 @@ import no.nav.bidrag.domene.enums.beregning.ResultatkodeSærtilskudd
 import no.nav.bidrag.domene.enums.diverse.Språk
 import no.nav.bidrag.domene.enums.inntekt.Inntektsrapportering
 import no.nav.bidrag.domene.enums.person.Bostatuskode
-import no.nav.bidrag.domene.enums.person.SivilstandskodeBeregning
+import no.nav.bidrag.domene.enums.person.Sivilstandskode
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 
@@ -52,7 +52,7 @@ class VisningsnavnTest {
     internal inner class SivilstandTest {
         @Test
         fun `Valider at alle kodeverdier har visningsnavn`() {
-            SivilstandskodeBeregning.entries.forEach {
+            Sivilstandskode.entries.forEach {
                 withClue("${it.name} mangler visningsnavn") {
                     it.visningsnavn.intern.isNotEmpty() shouldBe true
                 }
@@ -61,7 +61,7 @@ class VisningsnavnTest {
 
         @Test
         fun `Skal hente visningsnavn for sivilstand AINNTEKT_BEREGNET_12MND`() {
-            val visningsnavn = SivilstandskodeBeregning.GIFT_SAMBOER.visningsnavn
+            val visningsnavn = Sivilstandskode.GIFT_SAMBOER.visningsnavn
 
             visningsnavn.intern shouldBe "Gift/samboer"
             visningsnavn.bruker[Språk.NB] shouldBe "Gift/samboer"
@@ -84,8 +84,8 @@ class VisningsnavnTest {
             assertSoftly("Visningsnavn med forelder") {
                 val visningsnavn = Bostatuskode.MED_FORELDER.visningsnavn
 
-                visningsnavn.intern shouldBe "Registert på adresse"
-                visningsnavn.bruker[Språk.NB] shouldBe "Registert på adresse"
+                visningsnavn.intern shouldBe "Registrert på adresse"
+                visningsnavn.bruker[Språk.NB] shouldBe "Registrert på adresse"
             }
 
             assertSoftly("Visningsnavn med dokumentert skolegang") {
@@ -98,8 +98,8 @@ class VisningsnavnTest {
             assertSoftly("Visningsnavn med ikke med forelder") {
                 val visningsnavn = Bostatuskode.IKKE_MED_FORELDER.visningsnavn
 
-                visningsnavn.intern shouldBe "Ikke registert på adresse"
-                visningsnavn.bruker[Språk.NB] shouldBe "Ikke registert på adresse"
+                visningsnavn.intern shouldBe "Ikke registrert på adresse"
+                visningsnavn.bruker[Språk.NB] shouldBe "Ikke registrert på adresse"
             }
 
             assertSoftly("Visningsnavn med verge") {
