@@ -6,8 +6,6 @@ import io.swagger.v3.oas.annotations.media.Schema
 enum class SivilstandskodePDL {
     GIFT,
     UGIFT,
-    ENSLIG,
-    SAMBOER,
     UOPPGITT,
     ENKE_ELLER_ENKEMANN,
     SKILT,
