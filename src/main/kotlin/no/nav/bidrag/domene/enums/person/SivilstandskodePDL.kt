@@ -1,19 +1,17 @@
-@file:Suppress("unused")
-
 package no.nav.bidrag.domene.enums.person
 
 import io.swagger.v3.oas.annotations.media.Schema
 
 @Schema(enumAsRef = true)
-enum class Sivilstandstype {
-    ENKE_ELLER_ENKEMANN,
+enum class SivilstandskodePDL {
     GIFT,
-    GJENLEVENDE_PARTNER,
-    REGISTRERT_PARTNER,
-    SEPARERT,
-    SEPARERT_PARTNER,
-    SKILT,
-    SKILT_PARTNER,
     UGIFT,
     UOPPGITT,
+    ENKE_ELLER_ENKEMANN,
+    SKILT,
+    SEPARERT,
+    REGISTRERT_PARTNER,
+    SEPARERT_PARTNER,
+    SKILT_PARTNER,
+    GJENLEVENDE_PARTNER,
 }

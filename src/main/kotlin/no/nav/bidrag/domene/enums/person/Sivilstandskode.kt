@@ -4,16 +4,8 @@ import io.swagger.v3.oas.annotations.media.Schema
 
 @Schema(enumAsRef = true)
 enum class Sivilstandskode {
-    GIFT,
-    UGIFT,
+    GIFT_SAMBOER, // Hvis sivilstand er gift, samboer eller registrert partner
+    BOR_ALENE_MED_BARN, // Alle andre sivilstander,
     ENSLIG,
     SAMBOER,
-    UOPPGITT,
-    ENKE_ELLER_ENKEMANN,
-    SKILT,
-    SEPARERT,
-    REGISTRERT_PARTNER,
-    SEPARERT_PARTNER,
-    SKILT_PARTNER,
-    GJENLEVENDE_PARTNER,
 }

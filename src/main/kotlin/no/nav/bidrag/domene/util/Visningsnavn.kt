@@ -10,7 +10,7 @@ import no.nav.bidrag.domene.enums.beregning.ResultatkodeSærtilskudd
 import no.nav.bidrag.domene.enums.diverse.Språk
 import no.nav.bidrag.domene.enums.inntekt.Inntektsrapportering
 import no.nav.bidrag.domene.enums.person.Bostatuskode
-import no.nav.bidrag.domene.enums.person.SivilstandskodeBeregning
+import no.nav.bidrag.domene.enums.person.Sivilstandskode
 import java.net.URL
 
 typealias VisningsnavnKodeMap = Map<String, Visningsnavn>
@@ -25,7 +25,7 @@ data class Visningsnavn(
 
 val Inntektsrapportering.visningsnavn get() = lastVisningsnavnFraFil("inntekttype.yaml")[name] ?: visningsnavnMangler(name)
 fun Inntektsrapportering.visningsnavnIntern(årstall: Int?) = "${visningsnavn.intern} $årstall".trim()
-val SivilstandskodeBeregning.visningsnavn get() = lastVisningsnavnFraFil("sivilstand.yaml")[name] ?: visningsnavnMangler(name)
+val Sivilstandskode.visningsnavn get() = lastVisningsnavnFraFil("sivilstand.yaml")[name] ?: visningsnavnMangler(name)
 val Bostatuskode.visningsnavn get() = lastVisningsnavnFraFil("bostatus.yaml")[name] ?: visningsnavnMangler(name)
 val ResultatkodeForskudd.visningsnavn get() = lastVisningsnavnFraFil("resultat.yaml", "FORSKUDD")[name] ?: visningsnavnMangler(name)
 val ResultatkodeBarnebidrag.visningsnavn get() = lastVisningsnavnFraFil("resultat.yaml", "BARNEBIDRAG")[name] ?: visningsnavnMangler(name)
