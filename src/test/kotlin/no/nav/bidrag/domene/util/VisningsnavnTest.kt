@@ -30,7 +30,7 @@ class VisningsnavnTest {
 
         @Test
         fun `Skal returnere inntekstrapporteringer som krever årstall`() {
-            inntetksRapporteringVisningsnavnSomKreverÅrstall shouldContainAll listOf(Inntektsrapportering.LIGNINGSINNTEKT, Inntektsrapportering.AINNTEKT, Inntektsrapportering.KAPITALINNTEKT)
+            Inntektsrapportering.visningsnavnSomKreverÅrstall shouldContainAll listOf(Inntektsrapportering.LIGNINGSINNTEKT, Inntektsrapportering.AINNTEKT, Inntektsrapportering.KAPITALINNTEKT)
         }
 
         @Test
