@@ -2,10 +2,14 @@
 
 package no.nav.bidrag.domene.tid
 
+import io.swagger.v3.oas.annotations.media.Schema
 import java.time.LocalDate
 import java.time.YearMonth
 
-data class ÅrMånedsperiode(override val fom: YearMonth, override val til: YearMonth?) : Periode<YearMonth>() {
+data class ÅrMånedsperiode(
+    @Schema(example = "2023-01", type = "String", pattern = "YYYY-MM") override val fom: YearMonth,
+    @Schema(example = "2023-01", type = "String", pattern = "YYYY-MM") override val til: YearMonth?,
+) : Periode<YearMonth>() {
 
     init {
         validate()
