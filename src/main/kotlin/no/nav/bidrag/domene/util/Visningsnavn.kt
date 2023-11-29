@@ -23,6 +23,7 @@ data class Visningsnavn(
     val bruker: Map<Språk, String> = mapOf(Språk.NB to intern),
 )
 
+val inntetksRapporteringVisningsnavnSomKreverÅrstall get() = listOf(Inntektsrapportering.AINNTEKT, Inntektsrapportering.KAPITALINNTEKT, Inntektsrapportering.LIGNINGSINNTEKT)
 val Inntektsrapportering.visningsnavn get() = lastVisningsnavnFraFil("inntekttype.yaml")[name] ?: visningsnavnMangler(name)
 fun Inntektsrapportering.visningsnavnIntern(årstall: Int?) = "${visningsnavn.intern} $årstall".trim()
 val Sivilstandskode.visningsnavn get() = lastVisningsnavnFraFil("sivilstand.yaml")[name] ?: visningsnavnMangler(name)

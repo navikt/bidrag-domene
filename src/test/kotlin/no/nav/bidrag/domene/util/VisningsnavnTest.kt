@@ -2,6 +2,7 @@ package no.nav.bidrag.domene.util
 
 import io.kotest.assertions.assertSoftly
 import io.kotest.assertions.withClue
+import io.kotest.matchers.collections.shouldContainAll
 import io.kotest.matchers.shouldBe
 import no.nav.bidrag.domene.enums.beregning.ResultatkodeBarnebidrag
 import no.nav.bidrag.domene.enums.beregning.ResultatkodeForskudd
@@ -25,6 +26,11 @@ class VisningsnavnTest {
                     it.visningsnavn.intern.isNotEmpty() shouldBe true
                 }
             }
+        }
+
+        @Test
+        fun `Skal returnere inntekstrapporteringer som krever årstall`() {
+            inntetksRapporteringVisningsnavnSomKreverÅrstall shouldContainAll listOf(Inntektsrapportering.LIGNINGSINNTEKT, Inntektsrapportering.AINNTEKT, Inntektsrapportering.KAPITALINNTEKT)
         }
 
         @Test
