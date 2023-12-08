@@ -276,6 +276,12 @@ enum class Inntektsrapportering(
         inneholderInntektstypeListe = emptyList(),
     ),
 
+    OVERGANGSSTØNAD(
+        hentesAutomatisk = true,
+        kanLeggesInnManuelt = false,
+        inneholderInntektstypeListe = emptyList(),
+    ),
+
     PENSJON(
         hentesAutomatisk = true,
         kanLeggesInnManuelt = false,
@@ -311,6 +317,7 @@ enum class Inntektsrapportering(
         kanLeggesInnManuelt = false,
         inneholderInntektstypeListe = emptyList(),
     ),
+
     ;
 
     companion object {

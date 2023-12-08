@@ -126,6 +126,10 @@ NETTO_KAPITALINNTEKT:
   intern: "Netto kapitalinntekt"
   bruker:
     NB: "Netto kapitalinntekt"
+OVERGANGSSTØNAD:
+  intern: "Overgangsstønad"
+  bruker:
+    NB: "Overgangsstønad"
 PENSJON:
   intern: "Pensjon"
   bruker:
