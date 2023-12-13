@@ -12,10 +12,13 @@ enum class Inntektstype {
     LØNNSINNTEKT,
     NÆRINGSINNTEKT,
     KAPITALINNTEKT,
-    OVERGANGSSTØNAD,
-    KONTANTSTØTTE,
-    UTVIDET_BARNETRYGD,
-    SMÅBARNSTILLEGG,
+    OVERGANGSSTØNAD, // Ytelse fra offentlig
+    KONTANTSTØTTE, // Ytelse fra offentlig
+    UTVIDET_BARNETRYGD, // Ytelse fra offentlig
+    SMÅBARNSTILLEGG, // Ytelse fra offentlig
+    FORELDREPENGER, // Ytelse fra offentlig
+    INTRODUKSJONSSTØNAD, // Ytelse fra offentlig
+    KVALIFISERINGSSTØNAD, // Ytelse fra offentlig
     ;
 
     companion object {
