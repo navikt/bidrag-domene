@@ -154,3 +154,15 @@ SYKEPENGER:
   intern: "Sykepenger"
   bruker:
     NB: "Sykepenger"
+FORELDREPENGER:
+  intern: "Foreldrepenger"
+  bruker:
+    NB: "Foreldrepenger"
+INTRODUKSJONSSTØNAD:
+  intern: "Introduksjonsstønad"
+  bruker:
+    NB: "Introduksjonsstønad"
+KVALIFISERINGSSTØNAD:
+  intern: "Kvalifiseringsstønad"
+  bruker:
+    NB: "Kvalifiseringsstønad"

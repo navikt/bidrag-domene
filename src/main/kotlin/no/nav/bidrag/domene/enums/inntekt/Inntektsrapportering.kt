@@ -318,6 +318,24 @@ enum class Inntektsrapportering(
         inneholderInntektstypeListe = emptyList(),
     ),
 
+    FORELDREPENGER(
+        hentesAutomatisk = true,
+        kanLeggesInnManuelt = false,
+        inneholderInntektstypeListe = emptyList(),
+    ),
+
+    INTRODUKSJONSSTØNAD(
+        hentesAutomatisk = true,
+        kanLeggesInnManuelt = false,
+        inneholderInntektstypeListe = emptyList(),
+    ),
+
+    KVALIFISERINGSSTØNAD(
+        hentesAutomatisk = true,
+        kanLeggesInnManuelt = false,
+        inneholderInntektstypeListe = emptyList(),
+    ),
+
     ;
 
     companion object {
