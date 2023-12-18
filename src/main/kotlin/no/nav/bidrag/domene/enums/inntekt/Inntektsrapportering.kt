@@ -15,13 +15,15 @@ enum class Inntektsrapportering(
         hentesAutomatisk = true,
         kanLeggesInnManuelt = false,
         inneholderInntektstypeListe = listOf(
-            Inntektstype.DAGPENGER,
             Inntektstype.AAP,
-            Inntektstype.FØDSEL_ADOPSJON,
-            Inntektstype.PENSJON,
-            Inntektstype.SYKEPENGER,
+            Inntektstype.DAGPENGER,
+            Inntektstype.FORELDREPENGER,
+            Inntektstype.INTRODUKSJONSSTØNAD,
+            Inntektstype.KVALIFISERINGSSTØNAD,
             Inntektstype.LØNNSINNTEKT,
             Inntektstype.OVERGANGSSTØNAD,
+            Inntektstype.PENSJON,
+            Inntektstype.SYKEPENGER,
         ),
     ),
 
@@ -29,13 +31,15 @@ enum class Inntektsrapportering(
         hentesAutomatisk = true,
         kanLeggesInnManuelt = false,
         inneholderInntektstypeListe = listOf(
-            Inntektstype.DAGPENGER,
             Inntektstype.AAP,
-            Inntektstype.FØDSEL_ADOPSJON,
-            Inntektstype.PENSJON,
-            Inntektstype.SYKEPENGER,
+            Inntektstype.DAGPENGER,
+            Inntektstype.FORELDREPENGER,
+            Inntektstype.INTRODUKSJONSSTØNAD,
+            Inntektstype.KVALIFISERINGSSTØNAD,
             Inntektstype.LØNNSINNTEKT,
             Inntektstype.OVERGANGSSTØNAD,
+            Inntektstype.PENSJON,
+            Inntektstype.SYKEPENGER,
         ),
     ),
 
@@ -43,13 +47,15 @@ enum class Inntektsrapportering(
         hentesAutomatisk = true,
         kanLeggesInnManuelt = false,
         inneholderInntektstypeListe = listOf(
-            Inntektstype.DAGPENGER,
             Inntektstype.AAP,
-            Inntektstype.FØDSEL_ADOPSJON,
-            Inntektstype.PENSJON,
-            Inntektstype.SYKEPENGER,
+            Inntektstype.DAGPENGER,
+            Inntektstype.FORELDREPENGER,
+            Inntektstype.INTRODUKSJONSSTØNAD,
+            Inntektstype.KVALIFISERINGSSTØNAD,
             Inntektstype.LØNNSINNTEKT,
             Inntektstype.OVERGANGSSTØNAD,
+            Inntektstype.PENSJON,
+            Inntektstype.SYKEPENGER,
         ),
     ),
 
@@ -65,13 +71,15 @@ enum class Inntektsrapportering(
         hentesAutomatisk = true,
         kanLeggesInnManuelt = false,
         inneholderInntektstypeListe = listOf(
-            Inntektstype.DAGPENGER,
             Inntektstype.AAP,
-            Inntektstype.FØDSEL_ADOPSJON,
-            Inntektstype.PENSJON,
-            Inntektstype.SYKEPENGER,
+            Inntektstype.DAGPENGER,
+            Inntektstype.FORELDREPENGER,
+            Inntektstype.INTRODUKSJONSSTØNAD,
+            Inntektstype.KVALIFISERINGSSTØNAD,
             Inntektstype.LØNNSINNTEKT,
             Inntektstype.OVERGANGSSTØNAD,
+            Inntektstype.PENSJON,
+            Inntektstype.SYKEPENGER,
         ),
     ),
 
@@ -99,6 +107,70 @@ enum class Inntektsrapportering(
         ),
     ),
 
+    AAP(
+        hentesAutomatisk = true,
+        kanLeggesInnManuelt = false,
+        inneholderInntektstypeListe = listOf(
+            Inntektstype.AAP,
+        ),
+    ),
+
+    DAGPENGER(
+        hentesAutomatisk = true,
+        kanLeggesInnManuelt = false,
+        inneholderInntektstypeListe = listOf(
+            Inntektstype.DAGPENGER,
+        ),
+    ),
+
+    FORELDREPENGER(
+        hentesAutomatisk = true,
+        kanLeggesInnManuelt = false,
+        inneholderInntektstypeListe = listOf(
+            Inntektstype.FORELDREPENGER,
+        ),
+    ),
+
+    INTRODUKSJONSSTØNAD(
+        hentesAutomatisk = true,
+        kanLeggesInnManuelt = false,
+        inneholderInntektstypeListe = listOf(
+            Inntektstype.INTRODUKSJONSSTØNAD,
+        ),
+    ),
+
+    KVALIFISERINGSSTØNAD(
+        hentesAutomatisk = true,
+        kanLeggesInnManuelt = false,
+        inneholderInntektstypeListe = listOf(
+            Inntektstype.KVALIFISERINGSSTØNAD,
+        ),
+    ),
+
+    OVERGANGSSTØNAD(
+        hentesAutomatisk = true,
+        kanLeggesInnManuelt = false,
+        inneholderInntektstypeListe = listOf(
+            Inntektstype.OVERGANGSSTØNAD,
+        ),
+    ),
+
+    PENSJON(
+        hentesAutomatisk = true,
+        kanLeggesInnManuelt = false,
+        inneholderInntektstypeListe = listOf(
+            Inntektstype.PENSJON,
+        ),
+    ),
+
+    SYKEPENGER(
+        hentesAutomatisk = true,
+        kanLeggesInnManuelt = false,
+        inneholderInntektstypeListe = listOf(
+            Inntektstype.SYKEPENGER,
+        ),
+    ),
+
     // Manuelt registrerte rapporteringer
 
     PERSONINNTEKT_EGNE_OPPLYSNINGER(
@@ -107,11 +179,13 @@ enum class Inntektsrapportering(
         inneholderInntektstypeListe = listOf(
             Inntektstype.AAP,
             Inntektstype.DAGPENGER,
-            Inntektstype.FØDSEL_ADOPSJON,
-            Inntektstype.PENSJON,
-            Inntektstype.SYKEPENGER,
+            Inntektstype.FORELDREPENGER,
+            Inntektstype.INTRODUKSJONSSTØNAD,
+            Inntektstype.KVALIFISERINGSSTØNAD,
             Inntektstype.LØNNSINNTEKT,
             Inntektstype.OVERGANGSSTØNAD,
+            Inntektstype.PENSJON,
+            Inntektstype.SYKEPENGER,
         ),
     ),
 
@@ -129,11 +203,13 @@ enum class Inntektsrapportering(
         inneholderInntektstypeListe = listOf(
             Inntektstype.AAP,
             Inntektstype.DAGPENGER,
-            Inntektstype.FØDSEL_ADOPSJON,
-            Inntektstype.PENSJON,
-            Inntektstype.SYKEPENGER,
+            Inntektstype.FORELDREPENGER,
+            Inntektstype.INTRODUKSJONSSTØNAD,
+            Inntektstype.KVALIFISERINGSSTØNAD,
             Inntektstype.LØNNSINNTEKT,
             Inntektstype.OVERGANGSSTØNAD,
+            Inntektstype.PENSJON,
+            Inntektstype.SYKEPENGER,
         ),
     ),
 
@@ -159,20 +235,16 @@ enum class Inntektsrapportering(
         inneholderInntektstypeListe = listOf(
             Inntektstype.AAP,
             Inntektstype.DAGPENGER,
-            Inntektstype.FØDSEL_ADOPSJON,
+            Inntektstype.FORELDREPENGER,
+            Inntektstype.INTRODUKSJONSSTØNAD,
+            Inntektstype.KVALIFISERINGSSTØNAD,
+            Inntektstype.OVERGANGSSTØNAD,
             Inntektstype.PENSJON,
             Inntektstype.SYKEPENGER,
-            Inntektstype.OVERGANGSSTØNAD,
         ),
     ),
 
     // Rapporteringer brukt i Bisys/BBM
-
-    AAP(
-        hentesAutomatisk = true,
-        kanLeggesInnManuelt = false,
-        inneholderInntektstypeListe = emptyList(),
-    ),
 
     AINNTEKT_KORRIGERT_BARNETILLEGG(
         hentesAutomatisk = true,
@@ -187,12 +259,6 @@ enum class Inntektsrapportering(
     ),
 
     BARNS_SYKDOM(
-        hentesAutomatisk = true,
-        kanLeggesInnManuelt = false,
-        inneholderInntektstypeListe = emptyList(),
-    ),
-
-    DAGPENGER(
         hentesAutomatisk = true,
         kanLeggesInnManuelt = false,
         inneholderInntektstypeListe = emptyList(),
@@ -276,18 +342,6 @@ enum class Inntektsrapportering(
         inneholderInntektstypeListe = emptyList(),
     ),
 
-    OVERGANGSSTØNAD(
-        hentesAutomatisk = true,
-        kanLeggesInnManuelt = false,
-        inneholderInntektstypeListe = emptyList(),
-    ),
-
-    PENSJON(
-        hentesAutomatisk = true,
-        kanLeggesInnManuelt = false,
-        inneholderInntektstypeListe = emptyList(),
-    ),
-
     PENSJON_KORRIGERT_BARNETILLEGG(
         hentesAutomatisk = true,
         kanLeggesInnManuelt = false,
@@ -311,31 +365,6 @@ enum class Inntektsrapportering(
         kanLeggesInnManuelt = false,
         inneholderInntektstypeListe = emptyList(),
     ),
-
-    SYKEPENGER(
-        hentesAutomatisk = true,
-        kanLeggesInnManuelt = false,
-        inneholderInntektstypeListe = emptyList(),
-    ),
-
-    FORELDREPENGER(
-        hentesAutomatisk = true,
-        kanLeggesInnManuelt = false,
-        inneholderInntektstypeListe = emptyList(),
-    ),
-
-    INTRODUKSJONSSTØNAD(
-        hentesAutomatisk = true,
-        kanLeggesInnManuelt = false,
-        inneholderInntektstypeListe = emptyList(),
-    ),
-
-    KVALIFISERINGSSTØNAD(
-        hentesAutomatisk = true,
-        kanLeggesInnManuelt = false,
-        inneholderInntektstypeListe = emptyList(),
-    ),
-
     ;
 
     companion object {

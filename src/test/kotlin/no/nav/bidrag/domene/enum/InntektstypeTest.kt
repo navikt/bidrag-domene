@@ -15,6 +15,7 @@ class InntektstypeTest {
             Inntektsrapportering.AINNTEKT_BEREGNET_3MND,
             Inntektsrapportering.AINNTEKT_BEREGNET_12MND,
             Inntektsrapportering.LIGNINGSINNTEKT,
+            Inntektsrapportering.AAP,
             Inntektsrapportering.PERSONINNTEKT_EGNE_OPPLYSNINGER,
             Inntektsrapportering.SAKSBEHANDLER_BEREGNET_INNTEKT,
             Inntektsrapportering.YTELSE_FRA_OFFENTLIG_MANUELT_BEREGNET,
@@ -25,16 +26,51 @@ class InntektstypeTest {
             Inntektsrapportering.AINNTEKT_BEREGNET_3MND,
             Inntektsrapportering.AINNTEKT_BEREGNET_12MND,
             Inntektsrapportering.LIGNINGSINNTEKT,
+            Inntektsrapportering.DAGPENGER,
             Inntektsrapportering.PERSONINNTEKT_EGNE_OPPLYSNINGER,
             Inntektsrapportering.SAKSBEHANDLER_BEREGNET_INNTEKT,
             Inntektsrapportering.YTELSE_FRA_OFFENTLIG_MANUELT_BEREGNET,
         )
 
-        Inntektstype.FØDSEL_ADOPSJON.inngårIInntektRapporteringer() shouldBe listOf(
+        Inntektstype.FORELDREPENGER.inngårIInntektRapporteringer() shouldBe listOf(
             Inntektsrapportering.AINNTEKT,
             Inntektsrapportering.AINNTEKT_BEREGNET_3MND,
             Inntektsrapportering.AINNTEKT_BEREGNET_12MND,
             Inntektsrapportering.LIGNINGSINNTEKT,
+            Inntektsrapportering.FORELDREPENGER,
+            Inntektsrapportering.PERSONINNTEKT_EGNE_OPPLYSNINGER,
+            Inntektsrapportering.SAKSBEHANDLER_BEREGNET_INNTEKT,
+            Inntektsrapportering.YTELSE_FRA_OFFENTLIG_MANUELT_BEREGNET,
+        )
+
+        Inntektstype.INTRODUKSJONSSTØNAD.inngårIInntektRapporteringer() shouldBe listOf(
+            Inntektsrapportering.AINNTEKT,
+            Inntektsrapportering.AINNTEKT_BEREGNET_3MND,
+            Inntektsrapportering.AINNTEKT_BEREGNET_12MND,
+            Inntektsrapportering.LIGNINGSINNTEKT,
+            Inntektsrapportering.INTRODUKSJONSSTØNAD,
+            Inntektsrapportering.PERSONINNTEKT_EGNE_OPPLYSNINGER,
+            Inntektsrapportering.SAKSBEHANDLER_BEREGNET_INNTEKT,
+            Inntektsrapportering.YTELSE_FRA_OFFENTLIG_MANUELT_BEREGNET,
+        )
+
+        Inntektstype.KVALIFISERINGSSTØNAD.inngårIInntektRapporteringer() shouldBe listOf(
+            Inntektsrapportering.AINNTEKT,
+            Inntektsrapportering.AINNTEKT_BEREGNET_3MND,
+            Inntektsrapportering.AINNTEKT_BEREGNET_12MND,
+            Inntektsrapportering.LIGNINGSINNTEKT,
+            Inntektsrapportering.KVALIFISERINGSSTØNAD,
+            Inntektsrapportering.PERSONINNTEKT_EGNE_OPPLYSNINGER,
+            Inntektsrapportering.SAKSBEHANDLER_BEREGNET_INNTEKT,
+            Inntektsrapportering.YTELSE_FRA_OFFENTLIG_MANUELT_BEREGNET,
+        )
+
+        Inntektstype.OVERGANGSSTØNAD.inngårIInntektRapporteringer() shouldBe listOf(
+            Inntektsrapportering.AINNTEKT,
+            Inntektsrapportering.AINNTEKT_BEREGNET_3MND,
+            Inntektsrapportering.AINNTEKT_BEREGNET_12MND,
+            Inntektsrapportering.LIGNINGSINNTEKT,
+            Inntektsrapportering.OVERGANGSSTØNAD,
             Inntektsrapportering.PERSONINNTEKT_EGNE_OPPLYSNINGER,
             Inntektsrapportering.SAKSBEHANDLER_BEREGNET_INNTEKT,
             Inntektsrapportering.YTELSE_FRA_OFFENTLIG_MANUELT_BEREGNET,
@@ -45,6 +81,7 @@ class InntektstypeTest {
             Inntektsrapportering.AINNTEKT_BEREGNET_3MND,
             Inntektsrapportering.AINNTEKT_BEREGNET_12MND,
             Inntektsrapportering.LIGNINGSINNTEKT,
+            Inntektsrapportering.PENSJON,
             Inntektsrapportering.PERSONINNTEKT_EGNE_OPPLYSNINGER,
             Inntektsrapportering.SAKSBEHANDLER_BEREGNET_INNTEKT,
             Inntektsrapportering.YTELSE_FRA_OFFENTLIG_MANUELT_BEREGNET,
@@ -55,9 +92,27 @@ class InntektstypeTest {
             Inntektsrapportering.AINNTEKT_BEREGNET_3MND,
             Inntektsrapportering.AINNTEKT_BEREGNET_12MND,
             Inntektsrapportering.LIGNINGSINNTEKT,
+            Inntektsrapportering.SYKEPENGER,
             Inntektsrapportering.PERSONINNTEKT_EGNE_OPPLYSNINGER,
             Inntektsrapportering.SAKSBEHANDLER_BEREGNET_INNTEKT,
             Inntektsrapportering.YTELSE_FRA_OFFENTLIG_MANUELT_BEREGNET,
+        )
+
+        Inntektstype.KONTANTSTØTTE.inngårIInntektRapporteringer() shouldBe listOf(
+            Inntektsrapportering.KONTANTSTØTTE,
+        )
+
+        Inntektstype.SMÅBARNSTILLEGG.inngårIInntektRapporteringer() shouldBe listOf(
+            Inntektsrapportering.SMÅBARNSTILLEGG,
+        )
+
+        Inntektstype.UTVIDET_BARNETRYGD.inngårIInntektRapporteringer() shouldBe listOf(
+            Inntektsrapportering.UTVIDET_BARNETRYGD,
+        )
+
+        Inntektstype.KAPITALINNTEKT.inngårIInntektRapporteringer() shouldBe listOf(
+            Inntektsrapportering.KAPITALINNTEKT,
+            Inntektsrapportering.KAPITALINNTEKT_EGNE_OPPLYSNINGER,
         )
 
         Inntektstype.LØNNSINNTEKT.inngårIInntektRapporteringer() shouldBe listOf(
@@ -72,33 +127,6 @@ class InntektstypeTest {
 
         Inntektstype.NÆRINGSINNTEKT.inngårIInntektRapporteringer() shouldBe listOf(
             Inntektsrapportering.NÆRINGSINNTEKT_MANUELT_BEREGNET,
-        )
-
-        Inntektstype.KAPITALINNTEKT.inngårIInntektRapporteringer() shouldBe listOf(
-            Inntektsrapportering.KAPITALINNTEKT,
-            Inntektsrapportering.KAPITALINNTEKT_EGNE_OPPLYSNINGER,
-        )
-
-        Inntektstype.OVERGANGSSTØNAD.inngårIInntektRapporteringer() shouldBe listOf(
-            Inntektsrapportering.AINNTEKT,
-            Inntektsrapportering.AINNTEKT_BEREGNET_3MND,
-            Inntektsrapportering.AINNTEKT_BEREGNET_12MND,
-            Inntektsrapportering.LIGNINGSINNTEKT,
-            Inntektsrapportering.PERSONINNTEKT_EGNE_OPPLYSNINGER,
-            Inntektsrapportering.SAKSBEHANDLER_BEREGNET_INNTEKT,
-            Inntektsrapportering.YTELSE_FRA_OFFENTLIG_MANUELT_BEREGNET,
-        )
-
-        Inntektstype.KONTANTSTØTTE.inngårIInntektRapporteringer() shouldBe listOf(
-            Inntektsrapportering.KONTANTSTØTTE,
-        )
-
-        Inntektstype.UTVIDET_BARNETRYGD.inngårIInntektRapporteringer() shouldBe listOf(
-            Inntektsrapportering.UTVIDET_BARNETRYGD,
-        )
-
-        Inntektstype.SMÅBARNSTILLEGG.inngårIInntektRapporteringer() shouldBe listOf(
-            Inntektsrapportering.SMÅBARNSTILLEGG,
         )
     }
 }

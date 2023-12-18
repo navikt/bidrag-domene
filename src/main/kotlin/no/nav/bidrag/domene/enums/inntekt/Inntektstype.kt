@@ -6,19 +6,18 @@ import io.swagger.v3.oas.annotations.media.Schema
 enum class Inntektstype {
     AAP, // Ytelse fra offentlig
     DAGPENGER, // Ytelse fra offentlig
-    FØDSEL_ADOPSJON, // Ytelse fra offentlig
-    PENSJON, // Ytelse fra offentlig
-    SYKEPENGER, // Ytelse fra offentlig
-    LØNNSINNTEKT,
-    NÆRINGSINNTEKT,
-    KAPITALINNTEKT,
-    OVERGANGSSTØNAD, // Ytelse fra offentlig
-    KONTANTSTØTTE, // Ytelse fra offentlig
-    UTVIDET_BARNETRYGD, // Ytelse fra offentlig
-    SMÅBARNSTILLEGG, // Ytelse fra offentlig
     FORELDREPENGER, // Ytelse fra offentlig
     INTRODUKSJONSSTØNAD, // Ytelse fra offentlig
     KVALIFISERINGSSTØNAD, // Ytelse fra offentlig
+    OVERGANGSSTØNAD, // Ytelse fra offentlig
+    PENSJON, // Ytelse fra offentlig
+    SYKEPENGER, // Ytelse fra offentlig
+    KONTANTSTØTTE, // Ytelse fra offentlig
+    SMÅBARNSTILLEGG, // Ytelse fra offentlig
+    UTVIDET_BARNETRYGD, // Ytelse fra offentlig
+    KAPITALINNTEKT,
+    LØNNSINNTEKT,
+    NÆRINGSINNTEKT,
     ;
 
     companion object {
