@@ -35,11 +35,13 @@ enum class Transaksjonskode(val korreksjonskode: String?, val negativtBeløp: Bo
                 Stønadstype.EKTEFELLEBIDRAG.name -> F1
                 Stønadstype.MOTREGNING.name -> I1
                 Engangsbeløptype.SAERTILSKUDD.name -> E1
+                Engangsbeløptype.SÆRTILSKUDD.name -> E1
                 Engangsbeløptype.GEBYR_MOTTAKER.name -> G1
                 Engangsbeløptype.GEBYR_SKYLDNER.name -> G1
                 Engangsbeløptype.TILBAKEKREVING.name -> H1
                 Engangsbeløptype.ETTERGIVELSE.name -> K1
                 Engangsbeløptype.DIREKTE_OPPGJOR.name -> K2
+                Engangsbeløptype.DIREKTE_OPPGJØR.name -> K2
                 Engangsbeløptype.ETTERGIVELSE_TILBAKEKREVING.name -> K3
                 else -> throw IllegalStateException("Ugyldig type for transaksjonskode funnet!")
             }
