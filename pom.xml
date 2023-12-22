@@ -16,11 +16,10 @@
     <sha1/>
     <changelist>-SNAPSHOT</changelist>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <kotlin.version>1.9.21</kotlin.version>
+    <kotlin.version>1.9.22</kotlin.version>
     <kotlin.code.style>official</kotlin.code.style>
     <jackson.version>2.16.0</jackson.version>
     <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
-    <mockk.version>1.13.2</mockk.version>
     <kotest.version>5.8.0</kotest.version>
     <swagger.version>2.2.19</swagger.version>
     <java.version>1.8</java.version>
@@ -86,7 +85,7 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <version>6.1.1</version>
+      <version>6.1.2</version>
     </dependency>
     <dependency>
       <groupId>jakarta.persistence</groupId>
@@ -180,12 +179,12 @@
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-surefire-plugin</artifactId>
-              <version>3.2.2</version>
+              <version>3.2.3</version>
             </plugin>
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-failsafe-plugin</artifactId>
-              <version>3.2.2</version>
+              <version>3.2.3</version>
             </plugin>
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
@@ -243,7 +242,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.2.1</version>
+        <version>3.2.3</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
