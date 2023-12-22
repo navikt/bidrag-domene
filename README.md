@@ -1,5 +1,5 @@
 # bidrag-domene
-Domenetyper for team bidrag.
+Domenetyper for team bidrag. 
 
 Spesifikke domenetyper gjør at regler kan sentraliseres på tvers av prosjekter og sikrer 
 at typer ikke forveksles i parametere innad eller mellom systemer.
